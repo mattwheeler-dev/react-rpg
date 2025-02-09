@@ -6,10 +6,14 @@ const StatsBar = () => {
 	const { playerStats } = useContext(AppContext);
 	return (
 		<div className="stats-bar">
-			<p>Health: {playerStats.maxHealth}</p>
-			<p>Gold: {playerStats.gold}</p>
 			<p>Level: {playerStats.level}</p>
-			<p>Experience: {playerStats.xp}</p>
+			<p>
+				Health: {playerStats.health} / {playerStats.maxHealth}
+			</p>
+			<p>Gold: {playerStats.gold}</p>
+			<p>
+				XP: {playerStats.xp} / {playerStats.xpNeeded}
+			</p>
 		</div>
 	);
 };

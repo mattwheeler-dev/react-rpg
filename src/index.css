@@ -29,3 +29,20 @@ h1,
 h2 {
 	text-align: center;
 }
+
+main > p {
+	width: 84%;
+	margin: 1.5rem auto;
+}
+
+/* Btns */
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+button {
+	padding: 0.2rem 0.5rem;
+}

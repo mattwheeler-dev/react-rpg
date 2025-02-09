@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Inventory = () => {
+const PlayerInventory = () => {
 	const [showInventory, setShowInventory] = useState(false);
 
 	const toggleInventory = () => {
@@ -20,4 +20,4 @@ const Inventory = () => {
 	);
 };
 
-export default Inventory;
+export default PlayerInventory;
