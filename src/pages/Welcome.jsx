@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
+import "../assets/styles/Welcome.css";
 
 const Welcome = () => {
 	const { setLocation } = useContext(AppContext);
@@ -30,8 +31,10 @@ const Welcome = () => {
 				serving the darkness?
 			</p>
 
-			<button onClick={startAdventure}>Start Adventure!</button>
-			<button onClick={turnBack}>Turn Back...</button>
+			<div className="welcome-btns">
+				<button onClick={startAdventure}>Start Adventure!</button>
+				<button onClick={turnBack}>Turn Back...</button>
+			</div>
 		</main>
 	);
 };
