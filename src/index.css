@@ -31,13 +31,20 @@ main {
 
 /* Headings */
 h1,
-h2 {
+h2,
+h3 {
+	width: 100%;
 	text-align: center;
+	text-shadow: 0 0 0.5rem #000;
 }
 
 main > p {
-	width: 84%;
-	margin: 1.5rem auto;
+	max-height: 22rem;
+	width: 88%;
+	margin: 1rem auto;
+	padding: 0.5rem 1rem;
+	background-color: #202020cc;
+	overflow-y: scroll;
 }
 
 /* Btns */
@@ -55,24 +62,24 @@ button {
 /* Welcome page */
 .welcome,
 .town {
-	background-image: url("./assets/images/town.png");
+	background-image: url("./assets/images/bgs/town.png");
 }
 
 /* Town page */
 
 /* Inn page */
 .inn {
-	background-image: url("./assets/images/inn.png");
+	background-image: url("./assets/images/bgs/inn.png");
 }
 
 /* Shop page */
 .shop {
-	background-image: url("./assets/images/shop.png");
+	background-image: url("./assets/images/bgs/shop.png");
 }
 
 /* Cave page */
 .caves {
-	background-image: url("./assets/images/cave-entrance.png");
+	background-image: url("./assets/images/bgs/cave-entrance.png");
 }
 
 /* Fight page */
