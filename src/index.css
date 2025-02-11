@@ -11,6 +11,8 @@
 body {
 	height: 100dvh;
 	width: 100dvw;
+	color: #fff;
+	background-color: #202020;
 	overflow: clip;
 }
 
@@ -22,6 +24,9 @@ main {
 
 main {
 	padding-top: 2.5rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* Headings */
@@ -46,3 +51,28 @@ main > p {
 button {
 	padding: 0.2rem 0.5rem;
 }
+
+/* Welcome page */
+.welcome,
+.town {
+	background-image: url("./assets/images/town.png");
+}
+
+/* Town page */
+
+/* Inn page */
+.inn {
+	background-image: url("./assets/images/inn.png");
+}
+
+/* Shop page */
+.shop {
+	background-image: url("./assets/images/shop.png");
+}
+
+/* Cave page */
+.caves {
+	background-image: url("./assets/images/cave-entrance.png");
+}
+
+/* Fight page */
