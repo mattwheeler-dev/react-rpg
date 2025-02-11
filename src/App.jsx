@@ -3,7 +3,7 @@ import Welcome from "./pages/Welcome";
 import Town from "./pages/Town";
 import Inn from "./pages/Inn";
 import Shop from "./pages/Shop";
-import Caves from "./pages/Caves";
+import CaveEntrance from "./pages/CaveEntrance";
 import StatsBar from "./components/StatsBar";
 import Pack from "./components/Pack";
 import Items from "./components/Items";
@@ -43,7 +43,7 @@ function App() {
 				{location == "town" && <Town />}
 				{location == "inn" && <Inn />}
 				{location == "shop" && <Shop />}
-				{location == "caves" && <Caves />}
+				{location == "cave entrance" && <CaveEntrance />}
 			</AppContext.Provider>
 		</>
 	);

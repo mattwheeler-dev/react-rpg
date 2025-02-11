@@ -13,8 +13,8 @@ const Controls = () => {
 		setLocation("shop");
 	};
 
-	const goCaves = () => {
-		setLocation("caves");
+	const goCaveEntrance = () => {
+		setLocation("cave entrance");
 	};
 
 	const leave = () => {
@@ -28,9 +28,18 @@ const Controls = () => {
 	const buttonData = [
 		{ text: "The Drunken Dragon", action: goInn, locations: ["town"] },
 		{ text: "Volimar's Shop", action: goShop, locations: ["town"] },
-		{ text: "Kelindral Caves", action: goCaves, locations: ["town"] },
+		{ text: "Kelindral Caves", action: goCaveEntrance, locations: ["town"] },
 		{ text: "Rest", action: rest, locations: ["inn"] },
-		{ text: "Leave", action: leave, locations: ["inn", "shop"] },
+		{
+			text: "Enter Caves",
+			action: goCaveEntrance,
+			locations: ["cave entrance"],
+		},
+		{
+			text: "Leave",
+			action: leave,
+			locations: ["inn", "shop", "cave entrance"],
+		},
 	];
 
 	const buttons = buttonData.map((btn, index) => {

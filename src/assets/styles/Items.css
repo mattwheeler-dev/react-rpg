@@ -1,21 +1,29 @@
 /* Items, Shop, and Pack */
 /* Shared */
-.item-slot {
-	text-transform: capitalize;
-}
-
-/* Shop */
-.shop {
+.shop,
+.pack.open {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.shop-item {
-	height: fit-content;
+.shop-item,
+.pack-item {
+	height: 7rem;
 	width: 45%;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	background-color: #333;
+
 	border: 2px solid lime;
 }
+
+.item-slot {
+	text-transform: capitalize;
+	font-size: 0.7rem;
+}
+
+/* Shop */
 
 /* Pack */
 .open-pack {
@@ -33,13 +41,19 @@
 	right: 0.25rem;
 }
 
+.close-pack {
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+}
+
 .pack {
 	display: none;
 	max-height: 25rem;
 	width: 90%;
-	padding: 1rem;
+	padding: 1rem 0;
 	background-color: #111;
-	border: 2px solid lime;
+	border: 1px solid red;
 	position: absolute;
 	top: 10%;
 	left: 5%;
@@ -47,22 +61,6 @@
 	z-index: 99;
 }
 
-.pack.open {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.pack-item {
-	border: 1px solid red;
-	height: 5rem;
-	width: fit-content;
-	margin-top: 0.5rem;
-	padding: 0.25rem 0.5rem;
-}
-
-.close-pack {
-	position: absolute;
-	top: 0.2rem;
-	right: 0.2rem;
+.equipped-text {
+	font-size: 0.7rem;
 }

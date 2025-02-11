@@ -24,6 +24,7 @@ const Pack = () => {
 				{item.type == "armor" && (
 					<p className="item-stat">Armor: {item.armor}</p>
 				)}
+				{item.equipped && <p className="equipped-text">Equipped</p>}
 			</div>
 		);
 	});

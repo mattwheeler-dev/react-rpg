@@ -49,6 +49,7 @@ main > p {
 
 /* Btns */
 .controls {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -78,7 +79,7 @@ button {
 }
 
 /* Cave page */
-.caves {
+.cave-entrance {
 	background-image: url("./assets/images/bgs/cave-entrance.png");
 }
 

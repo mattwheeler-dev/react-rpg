@@ -1,7 +1,7 @@
 const Items = [
 	{
 		id: 1,
-		name: "Woodcutter's Axe",
+		name: "Woodcutting Axe",
 		type: "weapon",
 		slot: "main-hand",
 		value: 0,
@@ -58,6 +58,16 @@ const Items = [
 		armor: 1,
 		inPack: true,
 		equipped: true,
+	},
+	{
+		id: 7,
+		name: "Leather Gloves",
+		type: "armor",
+		slot: "hands",
+		value: 10,
+		armor: 2,
+		inPack: false,
+		equipped: false,
 	},
 ];
 
