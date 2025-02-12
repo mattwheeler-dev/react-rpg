@@ -4,6 +4,7 @@ import Town from "./pages/Town";
 import Inn from "./pages/Inn";
 import Shop from "./pages/Shop";
 import CaveEntrance from "./pages/CaveEntrance";
+import CaveInterior from "./pages/CaveInterior";
 import StatsBar from "./components/StatsBar";
 import Pack from "./components/Pack";
 import Items from "./components/Items";
@@ -44,6 +45,7 @@ function App() {
 				{location == "inn" && <Inn />}
 				{location == "shop" && <Shop />}
 				{location == "cave entrance" && <CaveEntrance />}
+				{location == "cave interior" && <CaveInterior />}
 			</AppContext.Provider>
 		</>
 	);

@@ -17,6 +17,10 @@ const Controls = () => {
 		setLocation("cave entrance");
 	};
 
+	const enterCaves = () => {
+		setLocation("cave interior");
+	};
+
 	const leave = () => {
 		setLocation("town");
 	};
@@ -32,7 +36,7 @@ const Controls = () => {
 		{ text: "Rest", action: rest, locations: ["inn"] },
 		{
 			text: "Enter Caves",
-			action: goCaveEntrance,
+			action: enterCaves,
 			locations: ["cave entrance"],
 		},
 		{

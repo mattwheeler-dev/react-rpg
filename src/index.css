@@ -43,7 +43,7 @@ main > p {
 	width: 88%;
 	margin: 1rem auto;
 	padding: 0.5rem 1rem;
-	background-color: #202020cc;
+	background-color: #2525257b;
 	overflow-y: scroll;
 }
 
@@ -60,27 +60,24 @@ button {
 	padding: 0.2rem 0.5rem;
 }
 
-/* Welcome page */
+/* Page bgs */
 .welcome,
 .town {
 	background-image: url("./assets/images/bgs/town.png");
 }
 
-/* Town page */
-
-/* Inn page */
 .inn {
 	background-image: url("./assets/images/bgs/inn.png");
 }
 
-/* Shop page */
 .shop {
 	background-image: url("./assets/images/bgs/shop.png");
 }
 
-/* Cave page */
 .cave-entrance {
 	background-image: url("./assets/images/bgs/cave-entrance.png");
 }
 
-/* Fight page */
+.cave-interior {
+	background-image: url("./assets/images/bgs/cave1.png");
+}
