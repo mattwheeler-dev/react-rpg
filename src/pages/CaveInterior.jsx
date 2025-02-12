@@ -1,15 +1,17 @@
+import { useState } from "react";
 // import Caves from "../components/Caves";
-import Monsters from "../components/Monsters";
+import MonsterFactory from "../components/MonsterFactory";
+import "../assets/styles/CaveInterior.css";
 
 const CaveInterior = () => {
-	const monster = Monsters[Math.floor(Math.random() * Monsters.length)];
+	const [currentMonster] = useState(MonsterFactory("Dread Slime"));
 	return (
 		<main className="cave-interior">
 			<div className="monster">
-				<img src={monster.img} alt={monster.name} />
-				<p>{monster.name}</p>
-				<p>{monster.health}</p>
-				<p>{monster.attack}</p>
+				<img src={currentMonster.img} alt={currentMonster.altText} />
+				<p>{currentMonster.name}</p>
+				<p>Health: {currentMonster.health}</p>
+				<p>Attack: {currentMonster.attack}</p>
 			</div>
 		</main>
 	);

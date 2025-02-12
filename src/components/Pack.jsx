@@ -16,6 +16,7 @@ const Pack = () => {
 				key={item.id}
 				className={item.equipped ? "pack-item equipped" : "pack-item"}
 			>
+				{/* <img src={} alt={} /> */}
 				<p>{item.name}</p>
 				<p className="item-slot">{item.slot}</p>
 				{item.type == "weapon" && (
