@@ -9,9 +9,11 @@ const BattleControls = () => {
 		monsterStats,
 		setMonsterStats,
 		inventory,
+		setVictory,
 	} = useContext(AppContext);
 	const [playerTurn, setPlayerTurn] = useState(true);
 
+	// Monster's turn
 	useEffect(() => {
 		setTimeout(() => {
 			if (playerTurn) {
@@ -22,6 +24,7 @@ const BattleControls = () => {
 					xp: playerStats.xp + monsterStats.xp,
 				});
 				setPlayerTurn(true);
+				setVictory(true);
 			} else {
 				setPlayerStats({
 					...playerStats,
@@ -29,7 +32,7 @@ const BattleControls = () => {
 				});
 				setPlayerTurn(true);
 			}
-		}, 2000);
+		}, 1500);
 	}, [
 		monsterStats.attack,
 		monsterStats.health,
@@ -37,6 +40,7 @@ const BattleControls = () => {
 		playerStats,
 		playerTurn,
 		setPlayerStats,
+		setVictory,
 	]);
 
 	const attack = () => {
@@ -59,8 +63,9 @@ const BattleControls = () => {
 
 	return (
 		<div className="controls">
-			<button onClick={attack}>Attack</button>
-			<button>Defend</button>
+			<button onClick={attack} disabled={!playerTurn}>
+				Attack
+			</button>
 			<button onClick={flee}>Flee</button>
 		</div>
 	);

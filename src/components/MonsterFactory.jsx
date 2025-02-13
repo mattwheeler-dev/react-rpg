@@ -11,50 +11,50 @@ const MonsterFactory = (monster) => {
 				id: "monster1",
 				name: monster,
 				health: 10,
+				maxHealth: 10,
 				attack: 2,
 				xp: 5,
 				img: slimeImg,
-				altText: "Slime monster",
 			};
 		case "Abyssal Salamander":
 			return {
 				id: "monster2",
 				name: monster,
 				health: 13,
+				maxHealth: 13,
 				attack: 3,
 				xp: 7,
 				img: salamanderImg,
-				altText: "Salamander monster",
 			};
 		case "Gloomspinner":
 			return {
 				id: "monster3",
 				name: monster,
 				health: 15,
+				maxHealth: 15,
 				attack: 4,
 				xp: 10,
 				img: gloomspinnerImg,
-				altText: "Spider monster",
 			};
 		case "Doomhound":
 			return {
 				id: "monster4",
 				name: monster,
 				health: 20,
+				maxHealth: 20,
 				attack: 6,
 				xp: 13,
 				img: doomhoundImg,
-				altText: "Doomhound monster",
 			};
 		case "Shriekfang":
 			return {
 				id: "monster5",
 				name: monster,
 				health: 25,
+				maxHealth: 25,
 				attack: 7,
 				xp: 15,
 				img: shriekfangImg,
-				altText: "Shriekfang monster",
 			};
 	}
 };

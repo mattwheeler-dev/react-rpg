@@ -29,6 +29,7 @@ function App() {
 	const [monsterStats, setMonsterStats] = useState(
 		MonsterFactory("Dread Slime")
 	);
+	const [victory, setVictory] = useState(false);
 
 	return (
 		<>
@@ -42,6 +43,8 @@ function App() {
 					setInventory,
 					monsterStats,
 					setMonsterStats,
+					victory,
+					setVictory,
 				}}
 			>
 				{location !== "welcome" && <StatsBar />}
