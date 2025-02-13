@@ -3,6 +3,8 @@ import ironSword from "../assets/images/items/iron-sword.png";
 import raggedShirt from "../assets/images/items/ragged-shirt.png";
 import raggedPants from "../assets/images/items/ragged-pants.png";
 import raggedBoots from "../assets/images/items/ragged-boots.png";
+import leatherGloves from "../assets/images/items/leather-gloves.png";
+import woodenShield from "../assets/images/items/wooden-shield.png";
 
 const Items = [
 	{
@@ -36,6 +38,7 @@ const Items = [
 		armor: 3,
 		inPack: false,
 		equipped: false,
+		img: woodenShield,
 	},
 	{
 		id: 4,
@@ -79,6 +82,7 @@ const Items = [
 		armor: 2,
 		inPack: false,
 		equipped: false,
+		img: leatherGloves,
 	},
 ];
 
