@@ -8,6 +8,7 @@ import CaveInterior from "./pages/CaveInterior";
 import StatsBar from "./components/StatsBar";
 import Pack from "./components/Pack";
 import Items from "./components/Items";
+import MonsterFactory from "./components/MonsterFactory";
 
 export const AppContext = createContext();
 
@@ -17,13 +18,16 @@ function App() {
 		level: 1,
 		health: 20,
 		maxHealth: 20,
+		attack: 0,
 		gold: 0,
 		xp: 0,
 		xpNeeded: 10,
-		skills: ["Attack"],
 	});
 	const [inventory, setInventory] = useState(
 		Items.filter((item) => item.inPack)
+	);
+	const [monsterStats, setMonsterStats] = useState(
+		MonsterFactory("Dread Slime")
 	);
 
 	return (
@@ -36,6 +40,8 @@ function App() {
 					setPlayerStats,
 					inventory,
 					setInventory,
+					monsterStats,
+					setMonsterStats,
 				}}
 			>
 				{location !== "welcome" && <StatsBar />}

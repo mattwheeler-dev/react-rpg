@@ -1,22 +1,6 @@
-import { useContext } from "react";
-import { AppContext } from "../App";
+import NavControls from "../components/NavControls";
 
 const Welcome = () => {
-	const { setLocation } = useContext(AppContext);
-
-	const startAdventure = () => {
-		// alert(
-		// 	"You've decided to aid the people of Kelindral, congratulations on taking the first step to becoming a hero!"
-		// );
-		setLocation("town");
-	};
-
-	const turnBack = () => {
-		// alert(
-		// 	"You turn back and leave Kelindral behind... So much for being a hero!"
-		// );
-	};
-
 	return (
 		<main className="welcome">
 			<h1>React RPG</h1>
@@ -32,10 +16,7 @@ const Welcome = () => {
 				the people of Kelindral?
 			</p>
 
-			<div className="controls">
-				<button onClick={startAdventure}>Start Adventure!</button>
-				<button onClick={turnBack}>Turn Back...</button>
-			</div>
+			<NavControls />
 		</main>
 	);
 };

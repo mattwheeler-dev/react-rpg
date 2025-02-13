@@ -1,4 +1,4 @@
-import Controls from "../components/Controls";
+import NavControls from "../components/NavControls";
 
 const Inn = () => {
 	return (
@@ -12,7 +12,7 @@ const Inn = () => {
 			</p>
 			<p className="tip">Tip: Resting at the inn restores your health.</p>
 
-			<Controls />
+			<NavControls />
 		</main>
 	);
 };

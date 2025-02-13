@@ -9,13 +9,19 @@
 
 .shop-item,
 .pack-item {
-	height: 7rem;
 	width: 45%;
 	margin-top: 0.5rem;
 	padding: 0.5rem;
+	text-align: center;
 	background-color: #333;
 
 	border: 2px solid lime;
+}
+
+.shop-item img,
+.pack-item img {
+	height: 5rem;
+	object-fit: contain;
 }
 
 .item-slot {

@@ -1,8 +1,8 @@
 import slimeImg from "../assets/images/monsters/slime1.png";
-// import salamanderImg from "../assets/images/monsters/salamander1.png";
-// import gloomspinnerImg from "../assets/images/monsters/gloomspinner1.png";
-// import doomhoundImg from "../assets/images/monsters/doomhound1.png";
-// import shriekfangImg from "../assets/images/monsters/shriekfang1.png";
+import salamanderImg from "../assets/images/monsters/salamander1.png";
+import gloomspinnerImg from "../assets/images/monsters/gloomspinner1.png";
+import doomhoundImg from "../assets/images/monsters/doomhound1.png";
+import shriekfangImg from "../assets/images/monsters/shriekfang1.png";
 
 const MonsterFactory = (monster) => {
 	switch (monster) {
@@ -23,7 +23,7 @@ const MonsterFactory = (monster) => {
 				health: 13,
 				attack: 3,
 				xp: 7,
-				// img: salamanderImg,
+				img: salamanderImg,
 				altText: "Salamander monster",
 			};
 		case "Gloomspinner":
@@ -33,7 +33,7 @@ const MonsterFactory = (monster) => {
 				health: 15,
 				attack: 4,
 				xp: 10,
-				// img: gloomspinnerImg,
+				img: gloomspinnerImg,
 				altText: "Spider monster",
 			};
 		case "Doomhound":
@@ -43,7 +43,7 @@ const MonsterFactory = (monster) => {
 				health: 20,
 				attack: 6,
 				xp: 13,
-				// img: doomhoundImg,
+				img: doomhoundImg,
 				altText: "Doomhound monster",
 			};
 		case "Shriekfang":
@@ -53,7 +53,7 @@ const MonsterFactory = (monster) => {
 				health: 25,
 				attack: 7,
 				xp: 15,
-				// img: shriekfangImg,
+				img: shriekfangImg,
 				altText: "Shriekfang monster",
 			};
 	}

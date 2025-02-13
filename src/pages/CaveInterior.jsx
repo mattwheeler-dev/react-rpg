@@ -1,18 +1,20 @@
-import { useState } from "react";
-// import Caves from "../components/Caves";
-import MonsterFactory from "../components/MonsterFactory";
+import { useContext } from "react";
+import { AppContext } from "../App";
+import BattleControls from "../components/BattleControls";
 import "../assets/styles/CaveInterior.css";
 
 const CaveInterior = () => {
-	const [currentMonster] = useState(MonsterFactory("Dread Slime"));
+	const { monsterStats } = useContext(AppContext);
+
 	return (
 		<main className="cave-interior">
 			<div className="monster">
-				<img src={currentMonster.img} alt={currentMonster.altText} />
-				<p>{currentMonster.name}</p>
-				<p>Health: {currentMonster.health}</p>
-				<p>Attack: {currentMonster.attack}</p>
+				<img src={monsterStats.img} alt={monsterStats.altText} />
+				<p>{monsterStats.name}</p>
+				<p>Health: {monsterStats.health}</p>
+				<p>Attack: {monsterStats.attack}</p>
 			</div>
+			<BattleControls />
 		</main>
 	);
 };

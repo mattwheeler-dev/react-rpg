@@ -1,4 +1,4 @@
-import Controls from "../components/Controls";
+import NavControls from "../components/NavControls";
 
 const CaveEntrance = () => {
 	return (
@@ -10,7 +10,7 @@ const CaveEntrance = () => {
 				casts twisted shadows, but the interior of the cave remains shrouded in
 				darkness, hiding whatever monstrosities lie within.
 			</p>
-			<Controls />
+			<NavControls />
 		</main>
 	);
 };

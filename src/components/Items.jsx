@@ -1,3 +1,9 @@
+import woodAxe from "../assets/images/items/woodcutting-axe.png";
+import ironSword from "../assets/images/items/iron-sword.png";
+import raggedShirt from "../assets/images/items/ragged-shirt.png";
+import raggedPants from "../assets/images/items/ragged-pants.png";
+import raggedBoots from "../assets/images/items/ragged-boots.png";
+
 const Items = [
 	{
 		id: 1,
@@ -8,6 +14,7 @@ const Items = [
 		damage: 5,
 		inPack: true,
 		equipped: true,
+		img: woodAxe,
 	},
 	{
 		id: 2,
@@ -18,6 +25,7 @@ const Items = [
 		damage: 10,
 		inPack: false,
 		equipped: false,
+		img: ironSword,
 	},
 	{
 		id: 3,
@@ -38,6 +46,7 @@ const Items = [
 		armor: 1,
 		inPack: true,
 		equipped: true,
+		img: raggedShirt,
 	},
 	{
 		id: 5,
@@ -48,6 +57,7 @@ const Items = [
 		armor: 1,
 		inPack: true,
 		equipped: true,
+		img: raggedPants,
 	},
 	{
 		id: 6,
@@ -58,6 +68,7 @@ const Items = [
 		armor: 1,
 		inPack: true,
 		equipped: true,
+		img: raggedBoots,
 	},
 	{
 		id: 7,

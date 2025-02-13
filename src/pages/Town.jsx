@@ -1,4 +1,4 @@
-import Controls from "../components/Controls";
+import NavControls from "../components/NavControls";
 
 const Town = () => {
 	return (
@@ -19,7 +19,7 @@ const Town = () => {
 				ominous purple glow coming from the entrance, and you can hear the
 				sounds of creatures echoing from within.
 			</p>
-			<Controls />
+			<NavControls />
 		</main>
 	);
 };

@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
 
-const Controls = () => {
+const NavControls = () => {
 	const { playerStats, setPlayerStats, location, setLocation } =
 		useContext(AppContext);
+
+	const goTown = () => {
+		setLocation("town");
+	};
 
 	const goInn = () => {
 		setLocation("inn");
@@ -21,15 +25,23 @@ const Controls = () => {
 		setLocation("cave interior");
 	};
 
-	const leave = () => {
-		setLocation("town");
+	const turnBack = () => {
+		alert(
+			"You turn back and leave Kelindral behind... So much for being a hero!"
+		);
 	};
 
 	const rest = () => {
+		if (playerStats.health == playerStats.maxHealth) {
+			alert("You are already at full health!");
+			return;
+		}
 		setPlayerStats({ ...playerStats, health: playerStats.maxHealth });
 	};
 
 	const buttonData = [
+		{ text: "Start Adventure!", action: goTown, locations: ["welcome"] },
+		{ text: "Turn Back...", action: turnBack, locations: ["welcome"] },
 		{ text: "The Drunken Dragon", action: goInn, locations: ["town"] },
 		{ text: "Volimar's Shop", action: goShop, locations: ["town"] },
 		{ text: "Kelindral Caves", action: goCaveEntrance, locations: ["town"] },
@@ -41,7 +53,7 @@ const Controls = () => {
 		},
 		{
 			text: "Leave",
-			action: leave,
+			action: goTown,
 			locations: ["inn", "shop", "cave entrance"],
 		},
 	];
@@ -61,4 +73,4 @@ const Controls = () => {
 	return <div className="controls">{buttons}</div>;
 };
 
-export default Controls;
+export default NavControls;
