@@ -3,25 +3,21 @@ import { AppContext } from "../App";
 import "../assets/styles/Pack.css";
 
 const Pack = () => {
-	const { inventory } = useContext(AppContext);
+	const { inventory, setInventory } = useContext(AppContext);
 	const [showPack, setShowPack] = useState(false);
 
 	const equipItem = (e) => {
 		const itemId = e.target.parentElement.id;
-		const targetItem = inventory.filter((item) => item.id == itemId)[0];
-		const targetSlot = targetItem.slot;
-		const replaced = inventory.filter((item) => item.slot == targetSlot);
 
-		// Unequip current item if any
-		if (replaced.length > 1) {
-			replaced.forEach((item) => {
-				if (item.id != targetItem.id) {
-					item.equipped = false;
-				}
-			});
-		}
+		setInventory((prevInventory) => {
+			const targetSlot = prevInventory.find((i) => i.id == itemId)?.slot;
 
-		targetItem.equipped = true;
+			return prevInventory.map((item) =>
+				item.slot === targetSlot
+					? { ...item, equipped: item.id == itemId }
+					: item
+			);
+		});
 	};
 
 	const items = inventory.map((item) => (
