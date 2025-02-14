@@ -1,0 +1,40 @@
+.pack {
+	max-height: 25rem;
+	padding: 1rem 0;
+	overflow-y: scroll;
+}
+
+.pack.open {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.pack-item {
+	width: 45%;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #333;
+	border: 2px solid lime;
+}
+
+.pack-item img {
+	height: 5rem;
+	object-fit: contain;
+}
+
+.close-pack {
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+}
+
+.item-slot {
+	text-transform: capitalize;
+	font-size: 0.7rem;
+}
+
+.equipped-text {
+	font-size: 0.7rem;
+}

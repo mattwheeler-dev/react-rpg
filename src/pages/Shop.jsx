@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../App";
 import NavControls from "../components/NavControls";
 import Items from "../components/Items";
-import "../assets/styles/Items.css";
+import "../assets/styles/Shop.css";
 
 const Shop = () => {
 	const { playerStats, setPlayerStats, inventory, setInventory } =
@@ -49,7 +49,7 @@ const Shop = () => {
 	return (
 		<main className="shop">
 			<h1>Volimar{`'`}s Shop</h1>
-			{itemCards}
+			<section className="shop-container">{itemCards}</section>
 			<NavControls />
 		</main>
 	);

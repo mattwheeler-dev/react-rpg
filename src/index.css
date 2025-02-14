@@ -1,6 +1,12 @@
 /* Google font import (Faculty Glyphic @ 300 - 700) */
 @import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
 
+/* Variables */
+:root {
+	--radius: 1rem;
+	--shadow: 0 0 0.5rem #000;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -23,7 +29,7 @@ main {
 }
 
 main {
-	padding-top: 2.5rem;
+	padding: 2.5rem 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -44,20 +50,23 @@ main > p {
 	margin: 1rem auto;
 	padding: 0.5rem 1rem;
 	background-color: #2525257b;
+	border: 2px solid #ffffff88;
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
 	overflow-y: scroll;
 }
 
-/* Btns */
+/* Buttons starting point */
+button {
+	padding: 0.2rem 0.5rem;
+}
+
 .controls {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
-}
-
-button {
-	padding: 0.2rem 0.5rem;
 }
 
 /* Page bgs */

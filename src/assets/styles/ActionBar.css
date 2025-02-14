@@ -1,0 +1,43 @@
+.action-bar {
+	height: 2.5rem;
+	width: 100%;
+	background-color: #000;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.action-bar-icon {
+	height: 100%;
+	width: 3rem;
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+/* Styles shared by action bar menus */
+.pack,
+.hero-info {
+	display: none;
+	width: 90%;
+	background-color: #101010;
+	border: 2px solid red;
+	position: fixed;
+	top: 10%;
+	left: 5%;
+	z-index: 99;
+}
+
+.open-hero,
+.open-pack {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.open-hero {
+	background-image: url("../images/hero-icon.png");
+}
+
+.open-pack {
+	background-image: url("../images/pack-icon.png");
+}

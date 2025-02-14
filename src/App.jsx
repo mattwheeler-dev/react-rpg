@@ -6,7 +6,7 @@ import Shop from "./pages/Shop";
 import CaveEntrance from "./pages/CaveEntrance";
 import CaveInterior from "./pages/CaveInterior";
 import StatsBar from "./components/StatsBar";
-import Pack from "./components/Pack";
+import ActionBar from "./components/ActionBar";
 import Items from "./components/Items";
 import MonsterFactory from "./components/MonsterFactory";
 
@@ -48,7 +48,7 @@ function App() {
 				}}
 			>
 				{location !== "welcome" && <StatsBar />}
-				{location !== "welcome" && <Pack />}
+				{location !== "welcome" && <ActionBar />}
 				{location == "welcome" && <Welcome />}
 				{location == "town" && <Town />}
 				{location == "inn" && <Inn />}

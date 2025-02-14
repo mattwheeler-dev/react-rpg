@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../App";
-import "../assets/styles/Items.css";
+import "../assets/styles/Pack.css";
 
 const Pack = () => {
 	const { inventory } = useContext(AppContext);
@@ -53,7 +53,10 @@ const Pack = () => {
 
 	return (
 		<>
-			<button className="open-pack" onClick={togglePack}></button>
+			<button
+				className="action-bar-icon open-pack"
+				onClick={togglePack}
+			></button>
 			<div className={showPack ? "pack open" : "pack"}>
 				<h3>Inventory</h3>
 				{items}
