@@ -4,12 +4,10 @@ import "../assets/styles/StatsBar.css";
 
 const StatsBar = () => {
 	const { playerStats } = useContext(AppContext);
+
 	return (
 		<div className="stats-bar">
 			<p>Level: {playerStats.level}</p>
-			<p>
-				Health: {playerStats.health} / {playerStats.maxHealth}
-			</p>
 			<p>Gold: {playerStats.gold}</p>
 			<p>
 				XP: {playerStats.xp} / {playerStats.xpNeeded}

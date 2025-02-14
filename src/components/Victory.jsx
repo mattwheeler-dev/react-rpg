@@ -13,22 +13,35 @@ const monsterNames = [
 const Victory = () => {
 	const {
 		playerStats,
+		setPlayerStats,
 		monsterStats,
 		setMonsterStats,
 		setLocation,
 		setVictory,
 	} = useContext(AppContext);
 
+	const goldGained = Math.ceil(Math.random() * 5 + 1) * playerStats.level;
+
 	const randomMonster = MonsterFactory(
 		monsterNames[Math.floor(Math.random() * monsterNames.length)]
 	);
 
+	const lootAndXp = () => {
+		setPlayerStats({
+			...playerStats,
+			gold: playerStats.gold + goldGained,
+			xp: playerStats.xp + monsterStats.xp,
+		});
+	};
+
 	const continueCaves = () => {
+		lootAndXp();
 		setMonsterStats(randomMonster);
 		setVictory(false);
 	};
 
 	const goTown = () => {
+		lootAndXp();
 		setLocation("town");
 		setMonsterStats(randomMonster);
 		setVictory(false);
@@ -40,7 +53,7 @@ const Victory = () => {
 			<p>
 				You have gained {monsterStats.xp} xp!
 				<br />
-				You loot {Math.ceil(Math.random() * 5 + 1) * playerStats.level} gold!
+				You loot {goldGained} gold!
 			</p>
 			<div className="controls">
 				<button onClick={continueCaves}>Continue Fighting</button>

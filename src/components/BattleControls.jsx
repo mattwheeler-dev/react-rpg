@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../App";
+import HealthBar from "./HealthBar";
 
 const BattleControls = () => {
 	const {
@@ -19,10 +20,6 @@ const BattleControls = () => {
 			if (playerTurn) {
 				return;
 			} else if (monsterStats.health < 1) {
-				setPlayerStats({
-					...playerStats,
-					xp: playerStats.xp + monsterStats.xp,
-				});
 				setPlayerTurn(true);
 				setVictory(true);
 			} else {
@@ -63,6 +60,7 @@ const BattleControls = () => {
 
 	return (
 		<div className="controls">
+			<HealthBar target="hero" />
 			<button onClick={attack} disabled={!playerTurn}>
 				Attack
 			</button>

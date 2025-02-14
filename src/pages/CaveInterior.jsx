@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
+import HealthBar from "../components/HealthBar";
 import BattleControls from "../components/BattleControls";
 import Victory from "../components/Victory";
 import "../assets/styles/CaveInterior.css";
@@ -12,7 +13,7 @@ const CaveInterior = () => {
 			<div className="monster">
 				<img src={monsterStats.img} alt={monsterStats.name} />
 				<p>{monsterStats.name}</p>
-				<p>Health: {monsterStats.health}</p>
+				<HealthBar target={monsterStats.name} />
 				<p>Attack: {monsterStats.attack}</p>
 			</div>
 			<BattleControls />
