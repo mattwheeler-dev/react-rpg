@@ -1,5 +1,6 @@
 import { useState, createContext } from "react";
 import Welcome from "./pages/Welcome";
+import TurnedBack from "./pages/TurnedBack";
 import Town from "./pages/Town";
 import Inn from "./pages/Inn";
 import Shop from "./pages/Shop";
@@ -47,8 +48,13 @@ function App() {
 					setVictory,
 				}}
 			>
-				{location !== "welcome" && <StatsBar />}
-				{location !== "welcome" && <ActionBar />}
+				{location !== "welcome" && location !== "turned back" && (
+					<>
+						<StatsBar />
+						<ActionBar />
+					</>
+				)}
+				{location == "turned back" && <TurnedBack />}
 				{location == "welcome" && <Welcome />}
 				{location == "town" && <Town />}
 				{location == "inn" && <Inn />}

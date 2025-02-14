@@ -26,9 +26,7 @@ const NavControls = () => {
 	};
 
 	const turnBack = () => {
-		alert(
-			"You turn back and leave Kelindral behind... So much for being a hero!"
-		);
+		setLocation("turned back");
 	};
 
 	const rest = () => {
