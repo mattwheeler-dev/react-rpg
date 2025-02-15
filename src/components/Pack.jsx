@@ -62,7 +62,7 @@ const Pack = () => {
 	return (
 		<>
 			<button
-				className="action-bar-icon open-pack"
+				className={`action-bar-icon open-pack ${showPack ? "active" : ""}`}
 				onClick={togglePack}
 			></button>
 			<div className={showPack ? "pack open" : "pack"}>

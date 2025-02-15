@@ -14,7 +14,11 @@
 	border: 1px solid #000;
 }
 
-/* Styles shared by action bar menus */
+.action-bar-icon.active {
+	background-color: orange;
+}
+
+/* Styles shared by action bar tabs */
 .pack,
 .hero-info {
 	display: none;

@@ -1,0 +1,7 @@
+.combat-log {
+	height: 10rem;
+	width: 76%;
+	margin: 1rem auto;
+	background-color: #000;
+	overflow-y: scroll;
+}

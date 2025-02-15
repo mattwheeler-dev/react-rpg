@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { AppContext } from "../App";
 import NavControls from "../components/NavControls";
 
 const Inn = () => {
+	const { playerStats } = useContext(AppContext);
 	return (
 		<main className="inn">
 			<h1>The Drunken Dragon</h1>
@@ -10,7 +13,11 @@ const Inn = () => {
 				So long as you don{`'`}t cause any trouble, you{`'`}re welcome to stay
 				here for free.
 			</p>
-			<p className="tip">Tip: Resting at the inn restores your health.</p>
+			<p className="tip">
+				Tip: Resting at the inn restores your health.
+				{playerStats.health === playerStats.maxHealth &&
+					" You currently have full health."}
+			</p>
 
 			<NavControls />
 		</main>

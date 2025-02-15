@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../App";
 import HealthBar from "../components/HealthBar";
 import BattleControls from "../components/BattleControls";
+import CombatLog from "../components/CombatLog";
 import Victory from "../components/Victory";
 import "../assets/styles/CaveInterior.css";
 
@@ -17,6 +18,7 @@ const CaveInterior = () => {
 				<p>Attack: {monsterStats.attack}</p>
 			</div>
 			<BattleControls />
+			<CombatLog />
 			{victory && <Victory />}
 		</main>
 	);

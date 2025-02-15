@@ -30,10 +30,6 @@ const NavControls = () => {
 	};
 
 	const rest = () => {
-		if (playerStats.health == playerStats.maxHealth) {
-			alert("You are already at full health!");
-			return;
-		}
 		setPlayerStats({ ...playerStats, health: playerStats.maxHealth });
 	};
 
@@ -61,7 +57,13 @@ const NavControls = () => {
 			return;
 		} else {
 			return (
-				<button key={index} onClick={btn.action}>
+				<button
+					key={index}
+					onClick={btn.action}
+					disabled={
+						btn.text === "Rest" && playerStats.health === playerStats.maxHealth
+					}
+				>
 					{btn.text}
 				</button>
 			);

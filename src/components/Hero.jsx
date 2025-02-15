@@ -17,7 +17,7 @@ const Hero = () => {
 	return (
 		<>
 			<button
-				className="action-bar-icon open-hero"
+				className={`action-bar-icon open-hero ${showHero ? "active" : ""}`}
 				onClick={toggleShowHero}
 			></button>
 			<section className={showHero ? "hero-info open" : "hero-info"}>

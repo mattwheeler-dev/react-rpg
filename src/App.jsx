@@ -17,7 +17,7 @@ function App() {
 	const [location, setLocation] = useState("welcome");
 	const [playerStats, setPlayerStats] = useState({
 		level: 1,
-		health: 20,
+		health: 17,
 		maxHealth: 20,
 		attack: 0,
 		armor: 0,
@@ -31,6 +31,7 @@ function App() {
 	const [monsterStats, setMonsterStats] = useState(
 		MonsterFactory("Dread Slime")
 	);
+	const [combatLog, setCombatLog] = useState([]);
 	const [victory, setVictory] = useState(false);
 
 	return (
@@ -45,6 +46,8 @@ function App() {
 					setInventory,
 					monsterStats,
 					setMonsterStats,
+					combatLog,
+					setCombatLog,
 					victory,
 					setVictory,
 				}}
