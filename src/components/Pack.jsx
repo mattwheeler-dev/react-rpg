@@ -1,10 +1,22 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../App";
 import "../assets/styles/Pack.css";
 
 const Pack = () => {
-	const { inventory, setInventory } = useContext(AppContext);
+	const { setPlayerStats, inventory, setInventory } = useContext(AppContext);
 	const [showPack, setShowPack] = useState(false);
+
+	useEffect(() => {
+		setPlayerStats((prevStats) => {
+			const totalArmor = inventory
+				.filter((item) => item.equipped && item.armor)
+				.reduce((sum, item) => sum + item.armor, 0);
+
+			if (prevStats.armor === totalArmor) return prevStats;
+
+			return { ...prevStats, armor: totalArmor };
+		});
+	}, [inventory, setPlayerStats]);
 
 	const equipItem = (e) => {
 		const itemId = e.target.parentElement.id;

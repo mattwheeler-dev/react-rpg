@@ -20,7 +20,8 @@ function App() {
 		health: 20,
 		maxHealth: 20,
 		attack: 0,
-		gold: 0,
+		armor: 0,
+		gold: 20,
 		xp: 0,
 		xpNeeded: 10,
 	});
