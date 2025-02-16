@@ -26,11 +26,8 @@ const Shop = () => {
 					<p>Cost: {item.value} Gold</p>
 					<button
 						className="buy-btn"
+						disabled={item.value > playerStats.gold}
 						onClick={() => {
-							if (item.value > playerStats.gold) {
-								alert("Sorry, you don't have enough gold to buy that...");
-								return;
-							}
 							item.inPack = true;
 							setPlayerStats({
 								...playerStats,
