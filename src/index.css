@@ -76,6 +76,10 @@ button {
 	background-image: url("./assets/images/bgs/town.png");
 }
 
+.turned-back {
+	background-image: url("./assets/images/bgs/turned-back.png");
+}
+
 .inn {
 	background-image: url("./assets/images/bgs/inn.png");
 }
