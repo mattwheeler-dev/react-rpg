@@ -17,11 +17,11 @@ function App() {
 	const [location, setLocation] = useState("welcome");
 	const [playerStats, setPlayerStats] = useState({
 		level: 1,
-		health: 17,
+		health: 20,
 		maxHealth: 20,
 		attack: 0,
 		armor: 0,
-		gold: 20,
+		gold: 0,
 		xp: 0,
 		xpNeeded: 10,
 	});

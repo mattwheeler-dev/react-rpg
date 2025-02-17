@@ -1,4 +1,5 @@
 .pack {
+	min-height: 10rem;
 	max-height: 25rem;
 	padding: 1rem 0;
 	overflow-y: scroll;
@@ -32,9 +33,5 @@
 
 .item-slot {
 	text-transform: capitalize;
-	font-size: 0.7rem;
-}
-
-.equipped-text {
 	font-size: 0.7rem;
 }
