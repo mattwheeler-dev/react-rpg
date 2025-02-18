@@ -1,6 +1,9 @@
 import { useState, useContext, useEffect } from "react";
 import { AppContext } from "../App";
 import HealthBar from "./HealthBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFaceGrin, faHand } from "@fortawesome/free-regular-svg-icons";
+import { faShield } from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/Hero.css";
 
 const Hero = () => {
@@ -10,6 +13,11 @@ const Hero = () => {
 		(item) => item.slot == "main-hand" && item.equipped
 	)[0];
 	const playerDamage = currentWeapon.damage + playerStats.attack;
+	const emptySlotIcons = {
+		head: faFaceGrin,
+		hands: faHand,
+		"off-hand": faShield,
+	};
 
 	// Calculate player's armor from equipped gear
 	useEffect(() => {
@@ -62,7 +70,7 @@ const Hero = () => {
 								{item?.img ? (
 									<img src={item.img} alt={item?.name} title={item?.name} />
 								) : (
-									""
+									<FontAwesomeIcon icon={emptySlotIcons[slot]} />
 								)}
 							</div>
 						);
