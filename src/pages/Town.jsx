@@ -5,8 +5,8 @@ const Town = () => {
 		<main className="town">
 			<h1>Kelindral</h1>
 			<p>
-				Luckily the town{`'`}s inn, The Drunken Dragon, is still standing and
-				you should be able to rest there when needed.
+				Luckily the town{`'`}s inn, The Tipsy Pixie, is still standing and you
+				should be able to rest there when needed.
 				<br />
 				<br />
 				One of the few remaining townsfolk is a merchant named Volimar, who

@@ -113,7 +113,7 @@ const BattleControls = () => {
 	};
 
 	return (
-		<div className="controls">
+		<div className="battle-controls">
 			<HealthBar target="hero" />
 			<button onClick={attack} disabled={!playerTurn}>
 				Attack

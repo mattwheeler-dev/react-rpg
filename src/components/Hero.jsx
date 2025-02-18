@@ -69,7 +69,7 @@ const Hero = () => {
 					})}
 				</div>
 				<p>Level: {playerStats.level}</p>
-				<HealthBar />
+				<HealthBar target={"hero"} />
 				<p style={xpBg}>
 					XP: {playerStats.xp} / {playerStats.xpNeeded}
 				</p>

@@ -3,6 +3,9 @@
 
 /* Variables */
 :root {
+	--primary: #023047;
+	--secondary: #ffb703;
+	--semi-trans-bg: #10101090;
 	--radius: 1rem;
 	--shadow: 0 0 0.5rem #000;
 }
@@ -30,7 +33,7 @@ main {
 }
 
 main {
-	padding: 2.5rem 0;
+	padding-top: 2.25rem;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -41,17 +44,19 @@ h1,
 h2,
 h3 {
 	width: 100%;
+	padding: 0.25rem;
 	text-align: center;
-	text-shadow: 0 0 0.5rem #000;
+	text-shadow: 0.2rem 0.15rem 0 #000;
+	background-color: var(--semi-trans-bg);
 }
 
 main > p {
-	max-height: 22rem;
+	max-height: 20rem;
 	width: 88%;
 	margin: 1rem auto;
 	padding: 0.5rem 1rem;
-	background-color: #2525257b;
-	border: 2px solid #ffffff88;
+	background-color: var(--semi-trans-bg);
+	border: 2px solid #ffffff40;
 	border-radius: var(--radius);
 	box-shadow: var(--shadow);
 	overflow-y: scroll;
@@ -59,15 +64,28 @@ main > p {
 
 /* Buttons starting point */
 button {
-	padding: 0.2rem 0.5rem;
+	padding: 0.25rem 0.75rem;
+	color: #fff;
+	background-color: var(--primary);
+	border: 3px outset var(--secondary);
 }
 
-.controls {
+button:disabled {
+	text-decoration: line-through;
+	background-color: #505050;
+	border-color: #000;
+}
+
+.nav-controls {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
+}
+
+.nav-controls button {
+	margin-bottom: 1rem;
 }
 
 /* Page bgs */
