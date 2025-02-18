@@ -1,17 +1,22 @@
+.cave-interior {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 /* Monster area */
 .monster-container {
 	height: 50%;
 	width: 90%;
-	margin: 1rem auto;
+	margin-top: 2rem;
 	text-align: center;
 }
 
 .monster-container img {
-	height: 70%;
+	height: 60%;
 }
 
 .monster-stats {
-	max-height: 25%;
 	padding-top: 0.25rem;
 	background-color: var(--semi-trans-bg);
 }
@@ -22,6 +27,7 @@
 
 /* Player controls area */
 .battle-controls {
+	width: 100%;
 	padding-top: 0.25rem;
 	text-align: center;
 	background-color: var(--semi-trans-bg);
@@ -37,5 +43,5 @@
 
 /* Health bars */
 .health-bar {
-	margin: 0.25rem 0;
+	margin-top: 0.25rem;
 }

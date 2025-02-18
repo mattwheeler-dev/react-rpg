@@ -32,7 +32,7 @@ const BattleControls = () => {
 			setCombatLog((prevLog) => [
 				...prevLog,
 				"Congrats! You leveled up!",
-				"Attack + 1 & Max Health + 5",
+				"| Attack + 1 & Max Health + 5 |",
 			]);
 		}
 	}, [playerStats.xp, playerStats.xpNeeded, setCombatLog, setPlayerStats]);
@@ -55,6 +55,10 @@ const BattleControls = () => {
 				setPlayerTurn(true);
 				setVictory(true);
 			} else if (playerStats.armor >= monsterStats.attack) {
+				setCombatLog((prevLog) => [
+					...prevLog,
+					`The ${monsterStats.name} attacked you, but your armor (${playerStats.armor}) blocked all  ${monsterStats.attack} damage!`,
+				]);
 				setPlayerTurn(true);
 			} else {
 				setPlayerStats({
@@ -66,7 +70,7 @@ const BattleControls = () => {
 					...prevLog,
 					`The ${monsterStats.name} attacks you for ${
 						monsterStats.attack - playerStats.armor
-					} damage`,
+					} damage.`,
 				]);
 				setPlayerTurn(true);
 			}
@@ -96,7 +100,7 @@ const BattleControls = () => {
 
 		setCombatLog([
 			...combatLog,
-			`You attacked the ${monsterStats.name} for ${playerDamage}`,
+			`You attacked the ${monsterStats.name} for ${playerDamage} damage.`,
 		]);
 
 		setPlayerTurn(false);
@@ -119,7 +123,9 @@ const BattleControls = () => {
 			<button onClick={attack} disabled={!playerTurn}>
 				Attack
 			</button>
-			<button onClick={flee}>Flee</button>
+			<button onClick={flee} disabled={!playerTurn}>
+				Flee
+			</button>
 		</div>
 	);
 };

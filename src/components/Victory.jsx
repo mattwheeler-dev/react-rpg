@@ -13,11 +13,11 @@ const monsterNames = [
 
 const Victory = () => {
 	const {
-		// playerStats,
-		// setPlayerStats,
 		monsterStats,
 		setMonsterStats,
 		setLocation,
+		combatLog,
+		setCombatLog,
 		setVictory,
 	} = useContext(AppContext);
 
@@ -28,6 +28,10 @@ const Victory = () => {
 
 	const continueCaves = () => {
 		setMonsterStats(randomMonster);
+		setCombatLog([
+			...combatLog,
+			`You continue through the caves and encounter a ${monsterStats.name}!`,
+		]);
 		setVictory(false);
 	};
 
@@ -39,13 +43,15 @@ const Victory = () => {
 
 	return (
 		<article className="victory-tab">
-			<h3>Amazing! You defeated the {monsterStats.name}!</h3>
+			<h3>Amazing, you defeated the {monsterStats.name}!</h3>
 			<p>Do you continue fighting monsters or do you return to town?</p>
-			<div className="controls">
+			<div className="nav-controls">
 				<button onClick={continueCaves}>Continue Fighting</button>
 				<button onClick={goTown}>Leave</button>
 			</div>
-			<p>(Fleeing during a battle may cause you to drop some gold...)</p>
+			<p className="tip">
+				(Fleeing during a battle may cause you to drop some gold...)
+			</p>
 		</article>
 	);
 };

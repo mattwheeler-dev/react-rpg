@@ -1,6 +1,6 @@
 .stats-bar {
 	width: 100%;
-	padding: 0.2rem 0.75rem;
+	padding: 0.25rem 0.75rem;
 	background-color: var(--primary);
 	border-bottom: 2px solid var(--secondary);
 	box-shadow: var(--shadow);

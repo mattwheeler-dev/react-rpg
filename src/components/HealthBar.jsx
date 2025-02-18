@@ -15,10 +15,10 @@ const HealthBar = ({ target }) => {
 	}
 
 	const healthBackground = {
-		background: `linear-gradient( 90deg, #bd0000 0%, #bd0000 ${
+		background: `linear-gradient( 90deg, #9b0202 0%, #bc0000 ${
 			(hp / maxHp) * 100
 		}%,
-        #000 ${(hp / maxHp) * 100 + 1}%
+         #000 ${(hp / maxHp) * 100 + 1}%
         )`,
 	};
 
