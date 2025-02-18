@@ -49,10 +49,10 @@ const Hero = () => {
 				<div className="hero-gear">
 					{[
 						"head",
-						"torso",
-						"hands",
 						"main-hand",
+						"torso",
 						"off-hand",
+						"hands",
 						"legs",
 						"feet",
 					].map((slot) => {
@@ -68,16 +68,18 @@ const Hero = () => {
 						);
 					})}
 				</div>
-				<p>Level: {playerStats.level}</p>
-				<HealthBar target={"hero"} />
-				<p style={xpBg}>
-					XP: {playerStats.xp} / {playerStats.xpNeeded}
-				</p>
-				<p>
-					Damage: {playerDamage} (Attack({playerStats.attack}) + Weapon(
-					{currentWeapon.damage}))
-				</p>
-				<p>Armor: {playerStats.armor}</p>
+				<div className="hero-stats">
+					<p>Level: {playerStats.level}</p>
+					<HealthBar target={"hero"} />
+					<p style={xpBg}>
+						XP: {playerStats.xp} / {playerStats.xpNeeded}
+					</p>
+					<p>
+						Damage: {playerDamage} (Attack({playerStats.attack}) + Weapon(
+						{currentWeapon.damage}))
+					</p>
+					<p>Armor: {playerStats.armor}</p>
+				</div>
 
 				<button className="close-hero" onClick={toggleShowHero}>
 					X

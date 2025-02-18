@@ -74,6 +74,10 @@ button {
 	border: 3px outset var(--secondary);
 }
 
+button:active {
+	scale: 0.9;
+}
+
 button:disabled {
 	text-decoration: line-through;
 	background-color: #505050;
