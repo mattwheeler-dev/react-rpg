@@ -6,6 +6,7 @@
 	--primary: #023047;
 	--secondary: #ffb703;
 	--semi-trans-bg: #10101090;
+	--semi-trans-border: 2px solid #ffffff40;
 	--radius: 1rem;
 	--shadow: 0 0 0.5rem #000;
 }
@@ -56,7 +57,7 @@ main > p {
 	margin: 1rem auto;
 	padding: 0.5rem 1rem;
 	background-color: var(--semi-trans-bg);
-	border: 2px solid #ffffff40;
+	border: var(--semi-trans-border);
 	border-radius: var(--radius);
 	box-shadow: var(--shadow);
 	overflow-y: scroll;
@@ -86,6 +87,15 @@ button:disabled {
 
 .nav-controls button {
 	margin-bottom: 1rem;
+	box-shadow: var(--shadow);
+}
+
+/* Tips */
+.tip {
+	font-size: 0.75rem;
+	background-color: #101010;
+	border: none;
+	box-shadow: none;
 }
 
 /* Page bgs */

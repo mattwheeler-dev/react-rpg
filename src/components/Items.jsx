@@ -78,7 +78,7 @@ const Items = [
 		name: "Leather Gloves",
 		type: "armor",
 		slot: "hands",
-		value: 10,
+		value: 5,
 		armor: 1,
 		inPack: false,
 		equipped: false,
