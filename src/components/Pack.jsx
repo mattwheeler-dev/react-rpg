@@ -34,20 +34,22 @@ const Pack = () => {
 
 	const items = inventory.map((item) => {
 		if (!item.equipped) {
-			<div key={item.id} id={item.id} className="pack-item">
-				<img src={item.img} alt={item.name} />
-				<p>{item.name}</p>
-				<p className="item-slot">{item.slot}</p>
-				{item.type == "weapon" && (
-					<p className="item-stat">Damage: {item.damage}</p>
-				)}
-				{item.type == "armor" && (
-					<p className="item-stat">Armor: {item.armor}</p>
-				)}
-				<button className="equip-btn" onClick={equipItem}>
-					Equip
-				</button>
-			</div>;
+			return (
+				<div key={item.id} id={item.id} className="pack-item">
+					<img src={item.img} alt={item.name} />
+					<p>{item.name}</p>
+					<p className="item-slot">{item.slot}</p>
+					{item.type == "weapon" && (
+						<p className="item-stat">Damage: {item.damage}</p>
+					)}
+					{item.type == "armor" && (
+						<p className="item-stat">Armor: {item.armor}</p>
+					)}
+					<button className="equip-btn" onClick={equipItem}>
+						Equip
+					</button>
+				</div>
+			);
 		}
 	});
 

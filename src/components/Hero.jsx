@@ -10,6 +10,14 @@ const Hero = () => {
 	)[0];
 	const playerDamage = currentWeapon.damage + playerStats.attack;
 
+	const xpBg = {
+		background: `linear-gradient( 90deg, #00375b 0%,rgb(0, 121, 201) ${
+			(playerStats.xp / playerStats.xpNeeded) * 100
+		}%,
+        #000 ${(playerStats.xp / playerStats.xpNeeded) * 100 + 1}%
+        )`,
+	};
+
 	const toggleShowHero = () => {
 		setShowHero(!showHero);
 	};
@@ -31,7 +39,7 @@ const Hero = () => {
 					{currentWeapon.damage}))
 				</p>
 				<p>Armor: {playerStats.armor}</p>
-				<p>
+				<p style={xpBg}>
 					XP: {playerStats.xp} / {playerStats.xpNeeded}
 				</p>
 
