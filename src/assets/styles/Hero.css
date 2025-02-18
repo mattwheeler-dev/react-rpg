@@ -1,3 +1,20 @@
 .hero-info.open {
 	display: block;
 }
+
+.hero-gear div {
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	border: 1px solid white;
+}
+
+.hero-gear div img {
+	height: 100%;
+}
+
+.close-hero {
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+}
