@@ -23,7 +23,7 @@ const HealthBar = ({ target }) => {
 	};
 
 	return (
-		<div className="health-bar">
+		<div className={`health-bar ${target}`}>
 			<p style={healthBackground}>
 				Health: {hp} / {maxHp}
 			</p>

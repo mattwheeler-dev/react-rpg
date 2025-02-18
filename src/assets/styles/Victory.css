@@ -1,0 +1,12 @@
+.victory-tab {
+	height: 70%;
+	width: 100%;
+	padding: 0 1rem;
+	text-align: center;
+	background-color: var(--gray);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: absolute;
+	top: 15%;
+}

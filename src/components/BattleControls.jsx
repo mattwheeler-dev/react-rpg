@@ -114,6 +114,7 @@ const BattleControls = () => {
 
 	return (
 		<div className="battle-controls">
+			<p className="hero-name">Hero</p>
 			<HealthBar target="hero" />
 			<button onClick={attack} disabled={!playerTurn}>
 				Attack

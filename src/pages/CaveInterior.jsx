@@ -11,11 +11,13 @@ const CaveInterior = () => {
 
 	return (
 		<main className="cave-interior">
-			<div className="monster">
+			<div className="monster-container">
 				<img src={monsterStats.img} alt={monsterStats.name} />
-				<p>{monsterStats.name}</p>
-				<HealthBar target={monsterStats.name} />
-				<p>Attack: {monsterStats.attack}</p>
+				<div className="monster-stats">
+					<p className="monster-name">{monsterStats.name}</p>
+					<p>Attack: {monsterStats.attack}</p>
+					<HealthBar target={"monster"} />
+				</div>
 			</div>
 			<BattleControls />
 			<CombatLog />

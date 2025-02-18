@@ -16,19 +16,12 @@
 	margin-top: 0.5rem;
 	padding: 0.5rem;
 	text-align: center;
-	background-color: #333;
-	border: 2px solid lime;
+	background-color: var(--primary);
+	border: 2px solid var(--secondary);
 }
 
 .pack-item img {
 	height: 5rem;
-	object-fit: contain;
-}
-
-.close-pack {
-	position: absolute;
-	top: 0.2rem;
-	right: 0.2rem;
 }
 
 .item-slot {

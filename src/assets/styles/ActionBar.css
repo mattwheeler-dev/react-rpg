@@ -18,16 +18,28 @@
 }
 
 /* Styles shared by action bar tabs */
-.pack,
-.hero-info {
+.hero-info,
+.pack {
 	display: none;
 	width: 90%;
-	background-color: var(--primary);
+	background-color: var(--gray);
 	border: 3px solid var(--secondary);
+	box-shadow: var(--shadow);
 	position: fixed;
 	top: 10%;
 	left: 5%;
 	z-index: 99;
+}
+
+.close-hero,
+.close-pack {
+	height: 2rem;
+	width: 2rem;
+	padding: 0;
+	border-radius: 50%;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
 }
 
 /* Action bar icon images */

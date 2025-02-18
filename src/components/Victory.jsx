@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
 import MonsterFactory from "./MonsterFactory";
+import "../assets/styles/Victory.css";
 
 const monsterNames = [
 	"Dread Slime",

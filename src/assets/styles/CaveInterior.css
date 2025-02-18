@@ -1,20 +1,41 @@
-.monster {
-	border: 2px solid orange;
-}
-
-.monster img {
-	height: 200px;
-}
-
-.victory-tab {
-	height: 70%;
-	width: 100%;
-	padding: 0 1rem;
+/* Monster area */
+.monster-container {
+	height: 50%;
+	width: 90%;
+	margin: 1rem auto;
 	text-align: center;
-	background-color: #101010;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	position: absolute;
-	top: 15%;
+}
+
+.monster-container img {
+	height: 70%;
+}
+
+.monster-stats {
+	max-height: 25%;
+	padding-top: 0.25rem;
+	background-color: var(--semi-trans-bg);
+}
+
+.monster-name {
+	font-size: 1.25rem;
+}
+
+/* Player controls area */
+.battle-controls {
+	padding-top: 0.25rem;
+	text-align: center;
+	background-color: var(--semi-trans-bg);
+}
+
+.hero-name {
+	font-size: 1.5rem;
+}
+
+.battle-controls button {
+	margin: 0.75rem;
+}
+
+/* Health bars */
+.health-bar {
+	margin: 0.25rem 0;
 }

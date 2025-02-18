@@ -1,7 +1,21 @@
 .combat-log {
-	height: 10rem;
-	width: 76%;
-	margin: 1rem auto;
-	background-color: #000;
+	display: none;
+	height: 15rem;
+	width: 80%;
+	padding: 0.5rem;
+	background-color: var(--gray);
+	border: 2px solid var(--secondary);
+	border-radius: var(--radius);
 	overflow-y: scroll;
+	position: fixed;
+	bottom: 10rem;
+	left: 10%;
+}
+
+.combat-log.open {
+	display: block;
+}
+
+.open-combat-log {
+	margin: 1rem auto;
 }
