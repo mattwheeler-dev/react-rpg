@@ -21,12 +21,11 @@ const Victory = () => {
 		setVictory,
 	} = useContext(AppContext);
 
-	const randomMonster = MonsterFactory(
-		// monsterNames[Math.floor(Math.random() * monsterNames.length)]
-		monsterNames[0]
-	);
-
 	const continueCaves = () => {
+		const randomMonster = MonsterFactory(
+			// monsterNames[Math.floor(Math.random() * monsterNames.length)]
+			monsterNames[0]
+		);
 		setMonsterStats(randomMonster);
 		setCombatLog([
 			...combatLog,
@@ -36,6 +35,10 @@ const Victory = () => {
 	};
 
 	const goTown = () => {
+		const randomMonster = MonsterFactory(
+			// monsterNames[Math.floor(Math.random() * monsterNames.length)]
+			monsterNames[0]
+		);
 		setLocation("town");
 		setMonsterStats(randomMonster);
 		setVictory(false);

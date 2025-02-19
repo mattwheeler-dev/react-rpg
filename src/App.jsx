@@ -28,7 +28,7 @@ function App() {
 	const [inventory, setInventory] = useState(
 		Items.filter((item) => item.inPack)
 	);
-	const [monsterStats, setMonsterStats] = useState(
+	const [monsterStats, setMonsterStats] = useState(() =>
 		MonsterFactory("Dread Slime")
 	);
 	const [combatLog, setCombatLog] = useState([]);

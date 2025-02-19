@@ -1,6 +1,14 @@
-import slimeImg1 from "../assets/images/monsters/slime1.png";
+import slime1 from "../assets/images/monsters/slime1.png";
+import slime2 from "../assets/images/monsters/slime2.png";
+import slime3 from "../assets/images/monsters/slime3.png";
+
+const slimeImgs = [slime1, slime2, slime3];
 
 const MonsterFactory = (monster) => {
+	const variant = Math.floor(Math.random() * slimeImgs.length);
+
+	console.log(`Variant: ${variant}`);
+
 	switch (monster) {
 		case "Dread Slime":
 			return {
@@ -10,7 +18,7 @@ const MonsterFactory = (monster) => {
 				maxHealth: 10,
 				attack: 2,
 				xp: 5,
-				img: slimeImg1,
+				img: slimeImgs[variant],
 			};
 	}
 };
