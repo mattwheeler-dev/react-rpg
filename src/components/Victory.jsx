@@ -6,7 +6,7 @@ import "../assets/styles/Victory.css";
 const monsterNames = [
 	"Bat",
 	"Bird",
-	"Bunny",
+	"Bunn",
 	"Crab",
 	"Lizard",
 	"Poker",
@@ -32,18 +32,17 @@ const Victory = () => {
 		setMonsterStats(randomMonster);
 		setCombatLog([
 			...combatLog,
-			`You continue through the caves and encounter a ${monsterStats.name}!`,
+			`You continue through the caves and encounter a ${randomMonster.name}!`,
 		]);
 		setVictory(false);
 	};
 
 	const goTown = () => {
 		const randomMonster = MonsterFactory(
-			// monsterNames[Math.floor(Math.random() * monsterNames.length)]
-			monsterNames[0]
+			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);
-		setLocation("town");
 		setMonsterStats(randomMonster);
+		setLocation("town");
 		setVictory(false);
 	};
 

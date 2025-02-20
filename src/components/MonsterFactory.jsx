@@ -5,6 +5,7 @@ import bat4 from "../assets/images/monsters/bat4.png";
 import bird1 from "../assets/images/monsters/bird1.png";
 import bird2 from "../assets/images/monsters/bird2.png";
 import bird3 from "../assets/images/monsters/bird3.png";
+import bird4 from "../assets/images/monsters/bird4.png";
 import bunn1 from "../assets/images/monsters/bunn1.png";
 import bunn2 from "../assets/images/monsters/bunn2.png";
 import bunn3 from "../assets/images/monsters/bunn3.png";
@@ -34,7 +35,7 @@ import slime3 from "../assets/images/monsters/slime3.png";
 
 // Image arrays for variants
 const batImgs = [bat1, bat2, bat3, bat4];
-const birdImgs = [bird1, bird2, bird3];
+const birdImgs = [bird1, bird2, bird3, bird4];
 const bunnImgs = [bunn1, bunn2, bunn3, bunn4, bunn5];
 const crabImgs = [crab1, crab2, crab3];
 const lizImgs = [liz1, liz2, liz3];
@@ -45,7 +46,7 @@ const slimeImgs = [slime1, slime2, slime3];
 
 const monsters = {
 	Bat: {
-		id: "bat",
+		name: "Bat",
 		health: 11,
 		maxHealth: 11,
 		attack: 3,
@@ -53,7 +54,7 @@ const monsters = {
 		images: batImgs,
 	},
 	Bird: {
-		id: "bird",
+		name: "Bird",
 		health: 9,
 		maxHealth: 9,
 		attack: 2,
@@ -61,7 +62,7 @@ const monsters = {
 		images: birdImgs,
 	},
 	Bunn: {
-		id: "bunn",
+		name: "Bunn",
 		health: 8,
 		maxHealth: 8,
 		attack: 1,
@@ -69,7 +70,7 @@ const monsters = {
 		images: bunnImgs,
 	},
 	Crab: {
-		id: "crab",
+		name: "Crab",
 		health: 12,
 		maxHealth: 12,
 		attack: 3,
@@ -77,7 +78,7 @@ const monsters = {
 		images: crabImgs,
 	},
 	Lizard: {
-		id: "lizard",
+		name: "Lizard",
 		health: 14,
 		maxHealth: 14,
 		attack: 4,
@@ -85,7 +86,7 @@ const monsters = {
 		images: lizImgs,
 	},
 	Poker: {
-		id: "poker",
+		name: "Poker",
 		health: 13,
 		maxHealth: 13,
 		attack: 5,
@@ -93,7 +94,7 @@ const monsters = {
 		images: pokerImgs,
 	},
 	Rat: {
-		id: "rat",
+		name: "Rat",
 		health: 10,
 		maxHealth: 10,
 		attack: 2,
@@ -101,7 +102,7 @@ const monsters = {
 		images: ratImgs,
 	},
 	Shell: {
-		id: "shell",
+		name: "Shell",
 		health: 15,
 		maxHealth: 15,
 		attack: 3,
@@ -109,7 +110,7 @@ const monsters = {
 		images: shellImgs,
 	},
 	Slime: {
-		id: "slime",
+		name: "Slime",
 		health: 10,
 		maxHealth: 10,
 		attack: 2,
