@@ -13,6 +13,21 @@ import MonsterFactory from "./components/MonsterFactory";
 
 export const AppContext = createContext();
 
+const monsterNames = [
+	"Bat",
+	"Bird",
+	"Bunny",
+	"Crab",
+	"Lizard",
+	"Poker",
+	"Rat",
+	"Shell",
+	"Slime",
+];
+
+const randomMonster =
+	monsterNames[Math.floor(Math.random() * monsterNames.length)];
+
 function App() {
 	const [location, setLocation] = useState("welcome");
 	const [playerStats, setPlayerStats] = useState({
@@ -29,7 +44,7 @@ function App() {
 		Items.filter((item) => item.inPack)
 	);
 	const [monsterStats, setMonsterStats] = useState(() =>
-		MonsterFactory("Dread Slime")
+		MonsterFactory(randomMonster)
 	);
 	const [combatLog, setCombatLog] = useState([]);
 	const [victory, setVictory] = useState(false);

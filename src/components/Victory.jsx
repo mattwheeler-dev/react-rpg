@@ -4,11 +4,15 @@ import MonsterFactory from "./MonsterFactory";
 import "../assets/styles/Victory.css";
 
 const monsterNames = [
-	"Dread Slime",
-	"Abyssal Salamander",
-	"Gloomspinner",
-	"Doomhound",
-	"Shriekfang",
+	"Bat",
+	"Bird",
+	"Bunny",
+	"Crab",
+	"Lizard",
+	"Poker",
+	"Rat",
+	"Shell",
+	"Slime",
 ];
 
 const Victory = () => {
@@ -23,8 +27,7 @@ const Victory = () => {
 
 	const continueCaves = () => {
 		const randomMonster = MonsterFactory(
-			// monsterNames[Math.floor(Math.random() * monsterNames.length)]
-			monsterNames[0]
+			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);
 		setMonsterStats(randomMonster);
 		setCombatLog([
