@@ -5,10 +5,16 @@ import btnPop from "../assets/sounds/btn-pop.mp3";
 import restSound from "../assets/sounds/rest.mp3";
 
 const NavControls = () => {
-	const { playerStats, setPlayerStats, location, setLocation } =
+	const { playerStats, setPlayerStats, location, setLocation, playMainMusic } =
 		useContext(AppContext);
 	const [playBtnPop] = useSound(btnPop);
 	const [playRest] = useSound(restSound);
+
+	const startAdventure = () => {
+		playBtnPop();
+		setLocation("town");
+		playMainMusic();
+	};
 
 	const goTown = () => {
 		playBtnPop();
@@ -47,7 +53,11 @@ const NavControls = () => {
 	};
 
 	const buttonData = [
-		{ text: "Start Adventure!", action: goTown, locations: ["welcome"] },
+		{
+			text: "Start Adventure!",
+			action: startAdventure,
+			locations: ["welcome"],
+		},
 		{ text: "Turn Back...", action: turnBack, locations: ["welcome"] },
 		{ text: "The Tipsy Pixie", action: goInn, locations: ["town"] },
 		{ text: "Volimar's Shop", action: goShop, locations: ["town"] },

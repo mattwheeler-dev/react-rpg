@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import Welcome from "./pages/Welcome";
 import TurnedBack from "./pages/TurnedBack";
 import Town from "./pages/Town";
@@ -11,6 +11,9 @@ import StatsBar from "./components/StatsBar";
 import ActionBar from "./components/ActionBar";
 import Items from "./components/Items";
 import MonsterFactory from "./components/MonsterFactory";
+import useSound from "use-sound";
+import mainMusic from "./assets/sounds/main-music.mp3";
+import caveMusic from "./assets/sounds/cave-music.mp3";
 
 export const AppContext = createContext();
 
@@ -50,6 +53,39 @@ function App() {
 	const [combatLog, setCombatLog] = useState([]);
 	const [victory, setVictory] = useState(false);
 	const [slainCount, setSlainCount] = useState(0);
+	const [currentMusic, setCurrentMusic] = useState(null);
+	const [playMainMusic, { stop: stopMainMusic }] = useSound(mainMusic, {
+		volume: 0.5,
+		loop: true,
+	});
+	const [playCaveMusic, { stop: stopCaveMusic }] = useSound(caveMusic, {
+		volume: 0.5,
+		loop: true,
+	});
+
+	// Play / change bg music based on location
+	useEffect(() => {
+		if (location === "welcome") {
+			return;
+		}
+
+		if (location == "cave interior" && currentMusic !== "cave") {
+			stopMainMusic();
+			setCurrentMusic("cave");
+			playCaveMusic();
+		} else if (location !== "cave interior" && currentMusic !== "main") {
+			stopCaveMusic();
+			setCurrentMusic("main");
+			playMainMusic();
+		}
+	}, [
+		currentMusic,
+		location,
+		playCaveMusic,
+		playMainMusic,
+		stopCaveMusic,
+		stopMainMusic,
+	]);
 
 	return (
 		<>
@@ -69,6 +105,7 @@ function App() {
 					setVictory,
 					slainCount,
 					setSlainCount,
+					playMainMusic,
 				}}
 			>
 				{location !== "welcome" && location !== "turned back" && (
