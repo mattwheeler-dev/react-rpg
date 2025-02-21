@@ -105,6 +105,25 @@ button:disabled {
 	box-shadow: none;
 }
 
+/* Game over stats */
+.scoreboard {
+	width: 80%;
+	margin: 2rem auto;
+	padding: 1.5rem 0;
+	text-align: center;
+	background-color: var(--primary);
+	border: 3px solid var(--secondary);
+	border-radius: var(--radius);
+}
+
+.scoreboard h4 {
+	font-size: 1.2rem;
+}
+
+.scoreboard p {
+	margin-top: 0.25rem;
+}
+
 /* Page bgs */
 .welcome,
 .town {
@@ -129,4 +148,8 @@ button:disabled {
 
 .cave-interior {
 	background-image: url("./assets/images/bgs/cave1.png");
+}
+
+.game-over {
+	background-image: url("./assets/images/bgs/game-over.png");
 }

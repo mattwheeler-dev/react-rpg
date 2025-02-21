@@ -4,6 +4,7 @@ import TurnedBack from "./pages/TurnedBack";
 import Town from "./pages/Town";
 import Inn from "./pages/Inn";
 import Shop from "./pages/Shop";
+import GameOver from "./pages/GameOver";
 import CaveEntrance from "./pages/CaveEntrance";
 import CaveInterior from "./pages/CaveInterior";
 import StatsBar from "./components/StatsBar";
@@ -16,7 +17,7 @@ export const AppContext = createContext();
 const monsterNames = [
 	"Bat",
 	"Bird",
-	"Bunny",
+	"Bunn",
 	"Crab",
 	"Lizard",
 	"Poker",
@@ -36,7 +37,7 @@ function App() {
 		maxHealth: 20,
 		attack: 0,
 		armor: 0,
-		gold: 4,
+		gold: 0,
 		xp: 0,
 		xpNeeded: 10,
 	});
@@ -48,6 +49,7 @@ function App() {
 	);
 	const [combatLog, setCombatLog] = useState([]);
 	const [victory, setVictory] = useState(false);
+	const [slainCount, setSlainCount] = useState(0);
 
 	return (
 		<>
@@ -65,6 +67,8 @@ function App() {
 					setCombatLog,
 					victory,
 					setVictory,
+					slainCount,
+					setSlainCount,
 				}}
 			>
 				{location !== "welcome" && location !== "turned back" && (
@@ -80,6 +84,7 @@ function App() {
 				{location == "shop" && <Shop />}
 				{location == "cave entrance" && <CaveEntrance />}
 				{location == "cave interior" && <CaveInterior />}
+				{location == "game over" && <GameOver />}
 			</AppContext.Provider>
 		</>
 	);

@@ -2,11 +2,14 @@ import { useContext } from "react";
 import { AppContext } from "../App";
 import NavControls from "../components/NavControls";
 import Items from "../components/Items";
+import { useSound } from "use-sound";
+import buySound from "../assets/sounds/buy.mp3";
 import "../assets/styles/Shop.css";
 
 const Shop = () => {
 	const { playerStats, setPlayerStats, inventory, setInventory } =
 		useContext(AppContext);
+	const [playBuySound] = useSound(buySound);
 
 	const itemCards = Items.map((item) => {
 		if (item.inPack) {
@@ -28,6 +31,7 @@ const Shop = () => {
 						className="buy-btn"
 						disabled={item.value > playerStats.gold}
 						onClick={() => {
+							playBuySound();
 							item.inPack = true;
 							setPlayerStats({
 								...playerStats,

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
 import MonsterFactory from "./MonsterFactory";
+import { useSound } from "use-sound";
+import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Victory.css";
 
 const monsterNames = [
@@ -24,8 +26,10 @@ const Victory = () => {
 		setCombatLog,
 		setVictory,
 	} = useContext(AppContext);
+	const [playBtnPop] = useSound(btnPop);
 
 	const continueCaves = () => {
+		playBtnPop();
 		const randomMonster = MonsterFactory(
 			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);
@@ -38,6 +42,7 @@ const Victory = () => {
 	};
 
 	const goTown = () => {
+		playBtnPop();
 		const randomMonster = MonsterFactory(
 			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);

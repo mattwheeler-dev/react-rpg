@@ -1,12 +1,16 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../App";
+import { useSound } from "use-sound";
+import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Pack.css";
 
 const Pack = () => {
 	const { inventory, setInventory } = useContext(AppContext);
 	const [showPack, setShowPack] = useState(false);
+	const [playBtnPop] = useSound(btnPop);
 
 	const equipItem = (e) => {
+		playBtnPop();
 		const itemId = e.target.parentElement.id;
 
 		setInventory((prevInventory) => {
@@ -42,6 +46,7 @@ const Pack = () => {
 	});
 
 	const togglePack = () => {
+		playBtnPop();
 		setShowPack(!showPack);
 	};
 

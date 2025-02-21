@@ -4,6 +4,8 @@ import HealthBar from "./HealthBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceGrin, faHand } from "@fortawesome/free-regular-svg-icons";
 import { faShield } from "@fortawesome/free-solid-svg-icons";
+import { useSound } from "use-sound";
+import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Hero.css";
 
 const Hero = () => {
@@ -18,6 +20,7 @@ const Hero = () => {
 		hands: faHand,
 		"off-hand": faShield,
 	};
+	const [playBtnPop] = useSound(btnPop);
 
 	// Calculate player's armor from equipped gear
 	useEffect(() => {
@@ -43,6 +46,7 @@ const Hero = () => {
 	const equippedGear = inventory.filter((item) => item.equipped);
 
 	const toggleShowHero = () => {
+		playBtnPop();
 		setShowHero(!showHero);
 	};
 
