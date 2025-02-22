@@ -5,6 +5,9 @@ import raggedPants from "../assets/images/items/ragged-pants.png";
 import raggedBoots from "../assets/images/items/ragged-boots.png";
 import leatherGloves from "../assets/images/items/leather-gloves.png";
 import woodenShield from "../assets/images/items/wooden-shield.png";
+import ironGloves from "../assets/images/items/iron-gloves.png";
+import ironBoots from "../assets/images/items/iron-boots.png";
+import ironPants from "../assets/images/items/iron-pants.png";
 
 const Items = [
 	{
@@ -83,6 +86,39 @@ const Items = [
 		inPack: false,
 		equipped: false,
 		img: leatherGloves,
+	},
+	{
+		id: 8,
+		name: "Iron Gloves",
+		type: "armor",
+		slot: "hands",
+		value: 12,
+		armor: 2,
+		inPack: false,
+		equipped: false,
+		img: ironGloves,
+	},
+	{
+		id: 9,
+		name: "Iron Boots",
+		type: "armor",
+		slot: "feet",
+		value: 13,
+		armor: 2,
+		inPack: false,
+		equipped: false,
+		img: ironBoots,
+	},
+	{
+		id: 10,
+		name: "Iron Pants",
+		type: "armor",
+		slot: "legs",
+		value: 20,
+		armor: 4,
+		inPack: false,
+		equipped: false,
+		img: ironPants,
 	},
 ];
 
