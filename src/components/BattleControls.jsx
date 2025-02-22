@@ -38,7 +38,7 @@ const BattleControls = () => {
 	const [playLevelUpSound] = useSound(levelUpSound);
 	const [playGameOverSound] = useSound(gameOverSound);
 
-	const goldGained = 5;
+	const goldGained = Math.floor(Math.random() * 7) + 4;
 
 	// Level up
 	useEffect(() => {
