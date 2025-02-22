@@ -24,6 +24,13 @@ const BattleControls = () => {
 		setSlainCount,
 	} = useContext(AppContext);
 	const [playerTurn, setPlayerTurn] = useState(true);
+
+	// State for animations
+	const [showSlash, setShowSlash] = useState(false);
+	const [showMonsterAttack, setShowMonsterAttack] = useState(false);
+	const [showBlock, setShowBlock] = useState(false);
+
+	// Sounds
 	const [playAttackSound] = useSound(attackSound);
 	const [playMonsterAttackSound] = useSound(monsterAttackSound);
 	const [playBlockedSound] = useSound(blockedSound);
@@ -80,6 +87,10 @@ const BattleControls = () => {
 				setVictory(true);
 			} else if (playerStats.armor >= monsterStats.attack) {
 				playBlockedSound();
+				setShowBlock(true);
+				setTimeout(() => {
+					setShowBlock(false);
+				}, 750);
 				setCombatLog((prevLog) => [
 					...prevLog,
 					`The ${monsterStats.name} attacked you, but your armor (${playerStats.armor}) blocked all  ${monsterStats.attack} damage!`,
@@ -87,6 +98,11 @@ const BattleControls = () => {
 				setPlayerTurn(true);
 			} else {
 				playMonsterAttackSound();
+				setShowMonsterAttack(true);
+				setTimeout(() => {
+					setShowMonsterAttack(false);
+				}, 500);
+
 				setPlayerStats({
 					...playerStats,
 					health:
@@ -127,6 +143,10 @@ const BattleControls = () => {
 
 	const attack = () => {
 		playAttackSound();
+		setShowSlash(true);
+		setTimeout(() => {
+			setShowSlash(false);
+		}, 500);
 		const currentWeapon = inventory.filter(
 			(item) => item.slot == "main-hand" && item.equipped
 		)[0];
@@ -158,6 +178,9 @@ const BattleControls = () => {
 
 	return (
 		<div className="battle-controls">
+			{showSlash && <div className="slash"></div>}
+			{showMonsterAttack && <div className="monster-attack"></div>}
+			{showBlock && <div className="block"></div>}
 			<p className="hero-name">Hero</p>
 			<HealthBar target="hero" />
 			<button onClick={attack} disabled={!playerTurn}>
