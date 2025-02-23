@@ -124,6 +124,7 @@ const BattleControls = () => {
 			setLocation("game over");
 		}
 	}, [
+		goldGained,
 		monsterStats.attack,
 		monsterStats.health,
 		monsterStats.name,
