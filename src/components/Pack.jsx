@@ -59,7 +59,7 @@ const Pack = () => {
 			<div className={showPack ? "pack open" : "pack"}>
 				<h3>Pack</h3>
 				{items}
-				<button onClick={togglePack} className="close-pack">
+				<button onClick={togglePack} className="close-btn">
 					X
 				</button>
 			</div>

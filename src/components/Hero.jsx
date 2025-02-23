@@ -93,7 +93,7 @@ const Hero = () => {
 					<p>Armor: {playerStats.armor}</p>
 				</div>
 
-				<button className="close-hero" onClick={toggleShowHero}>
+				<button className="close-btn" onClick={toggleShowHero}>
 					X
 				</button>
 			</section>

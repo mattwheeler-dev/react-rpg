@@ -19,7 +19,8 @@
 
 /* Styles shared by action bar tabs */
 .hero-info,
-.pack {
+.pack,
+.settings {
 	display: none;
 	width: 90%;
 	background-color: var(--gray);
@@ -31,8 +32,7 @@
 	z-index: 99;
 }
 
-.close-hero,
-.close-pack {
+.close-btn {
 	height: 2rem;
 	width: 2rem;
 	padding: 0;
@@ -44,7 +44,8 @@
 
 /* Action bar icon images */
 .open-hero,
-.open-pack {
+.open-pack,
+.open-settings {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -56,4 +57,8 @@
 
 .open-pack {
 	background-image: url("../images/pack-icon.png");
+}
+
+.open-settings {
+	background-image: url("../images/settings-icon.png");
 }

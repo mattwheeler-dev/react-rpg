@@ -77,9 +77,3 @@
 .hero-stats p {
 	margin: 0.5rem 0;
 }
-
-.close-hero {
-	position: absolute;
-	top: 0.2rem;
-	right: 0.2rem;
-}
