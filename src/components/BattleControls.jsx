@@ -22,6 +22,7 @@ const BattleControls = () => {
 		setVictory,
 		slainCount,
 		setSlainCount,
+		SFXon,
 	} = useContext(AppContext);
 	const [playerTurn, setPlayerTurn] = useState(true);
 
@@ -43,7 +44,9 @@ const BattleControls = () => {
 	// Level up
 	useEffect(() => {
 		if (playerStats.xp >= playerStats.xpNeeded) {
-			playLevelUpSound();
+			if (SFXon) {
+				playLevelUpSound();
+			}
 			setPlayerStats((prevStats) => ({
 				...prevStats,
 				level: prevStats.level + 1,
@@ -59,13 +62,7 @@ const BattleControls = () => {
 				"| Attack + 1 & Max Health + 5 |",
 			]);
 		}
-	}, [
-		playLevelUpSound,
-		playerStats.xp,
-		playerStats.xpNeeded,
-		setCombatLog,
-		setPlayerStats,
-	]);
+	}, [playerTurn]);
 
 	// Monster turn
 	useEffect(() => {
@@ -86,7 +83,9 @@ const BattleControls = () => {
 				setPlayerTurn(true);
 				setVictory(true);
 			} else if (playerStats.armor >= monsterStats.attack) {
-				playBlockedSound();
+				if (SFXon) {
+					playBlockedSound();
+				}
 				setShowBlock(true);
 				setTimeout(() => {
 					setShowBlock(false);
@@ -97,7 +96,9 @@ const BattleControls = () => {
 				]);
 				setPlayerTurn(true);
 			} else {
-				playMonsterAttackSound();
+				if (SFXon) {
+					playMonsterAttackSound();
+				}
 				setShowMonsterAttack(true);
 				setTimeout(() => {
 					setShowMonsterAttack(false);
@@ -120,30 +121,17 @@ const BattleControls = () => {
 
 		// Check for player death
 		if (playerStats.health < 1) {
-			playGameOverSound();
+			if (SFXon) {
+				playGameOverSound();
+			}
 			setLocation("game over");
 		}
-	}, [
-		goldGained,
-		monsterStats.attack,
-		monsterStats.health,
-		monsterStats.name,
-		monsterStats.xp,
-		playBlockedSound,
-		playGameOverSound,
-		playMonsterAttackSound,
-		playerStats,
-		playerTurn,
-		setCombatLog,
-		setLocation,
-		setPlayerStats,
-		setSlainCount,
-		setVictory,
-		slainCount,
-	]);
+	}, [playerTurn]);
 
 	const attack = () => {
-		playAttackSound();
+		if (SFXon) {
+			playAttackSound();
+		}
 		setShowSlash(true);
 		setTimeout(() => {
 			setShowSlash(false);
@@ -167,7 +155,9 @@ const BattleControls = () => {
 	};
 
 	const flee = () => {
-		playFleeSound();
+		if (SFXon) {
+			playFleeSound();
+		}
 		setLocation("town");
 		if (playerStats.gold > 10) {
 			setPlayerStats({

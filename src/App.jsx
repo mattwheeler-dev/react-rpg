@@ -54,6 +54,10 @@ function App() {
 	const [victory, setVictory] = useState(false);
 	const [slainCount, setSlainCount] = useState(0);
 	const [currentMusic, setCurrentMusic] = useState(null);
+
+	// SFX and music
+	const [SFXon, setSFXon] = useState(true);
+	const [musicOn, setMusicOn] = useState(true);
 	const [playMainMusic, { stop: stopMainMusic }] = useSound(mainMusic, {
 		volume: 0.5,
 		loop: true,
@@ -65,15 +69,22 @@ function App() {
 
 	// Play / change bg music based on location
 	useEffect(() => {
-		if (location === "welcome") {
+		if (location === "welcome" || !musicOn) {
+			stopMainMusic();
+			stopCaveMusic();
+			setCurrentMusic(null);
 			return;
 		}
 
-		if (location == "cave interior" && currentMusic !== "cave") {
+		if (location == "cave interior" && currentMusic !== "cave" && musicOn) {
 			stopMainMusic();
 			setCurrentMusic("cave");
 			playCaveMusic();
-		} else if (location !== "cave interior" && currentMusic !== "main") {
+		} else if (
+			location !== "cave interior" &&
+			currentMusic !== "main" &&
+			musicOn
+		) {
 			stopCaveMusic();
 			setCurrentMusic("main");
 			playMainMusic();
@@ -81,6 +92,7 @@ function App() {
 	}, [
 		currentMusic,
 		location,
+		musicOn,
 		playCaveMusic,
 		playMainMusic,
 		stopCaveMusic,
@@ -106,6 +118,10 @@ function App() {
 					slainCount,
 					setSlainCount,
 					playMainMusic,
+					SFXon,
+					setSFXon,
+					musicOn,
+					setMusicOn,
 				}}
 			>
 				{location !== "welcome" && location !== "turned back" && (
