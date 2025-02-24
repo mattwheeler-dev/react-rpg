@@ -7,7 +7,7 @@ import buySound from "../assets/sounds/buy.mp3";
 import "../assets/styles/Shop.css";
 
 const Shop = () => {
-	const { playerStats, setPlayerStats, inventory, setInventory } =
+	const { playerStats, setPlayerStats, inventory, setInventory, SFXon } =
 		useContext(AppContext);
 	const [playBuySound] = useSound(buySound);
 
@@ -31,7 +31,9 @@ const Shop = () => {
 						className="buy-btn"
 						disabled={item.value > playerStats.gold}
 						onClick={() => {
-							playBuySound();
+							if (SFXon) {
+								playBuySound();
+							}
 							item.inPack = true;
 							setPlayerStats({
 								...playerStats,

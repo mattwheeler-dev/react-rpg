@@ -9,7 +9,8 @@ import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Hero.css";
 
 const Hero = () => {
-	const { playerStats, setPlayerStats, inventory } = useContext(AppContext);
+	const { playerStats, setPlayerStats, inventory, SFXon } =
+		useContext(AppContext);
 	const [showHero, setShowHero] = useState(false);
 	const currentWeapon = inventory.filter(
 		(item) => item.slot == "main-hand" && item.equipped
@@ -46,7 +47,9 @@ const Hero = () => {
 	const equippedGear = inventory.filter((item) => item.equipped);
 
 	const toggleShowHero = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setShowHero(!showHero);
 	};
 

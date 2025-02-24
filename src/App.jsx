@@ -89,15 +89,7 @@ function App() {
 			setCurrentMusic("main");
 			playMainMusic();
 		}
-	}, [
-		currentMusic,
-		location,
-		musicOn,
-		playCaveMusic,
-		playMainMusic,
-		stopCaveMusic,
-		stopMainMusic,
-	]);
+	}, [currentMusic, location, musicOn]);
 
 	return (
 		<>

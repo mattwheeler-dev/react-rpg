@@ -5,12 +5,14 @@ import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Pack.css";
 
 const Pack = () => {
-	const { inventory, setInventory } = useContext(AppContext);
+	const { inventory, setInventory, SFXon } = useContext(AppContext);
 	const [showPack, setShowPack] = useState(false);
 	const [playBtnPop] = useSound(btnPop);
 
 	const equipItem = (e) => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		const itemId = e.target.parentElement.id;
 
 		setInventory((prevInventory) => {
@@ -46,7 +48,9 @@ const Pack = () => {
 	});
 
 	const togglePack = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setShowPack(!showPack);
 	};
 

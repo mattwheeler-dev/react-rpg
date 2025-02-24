@@ -5,7 +5,7 @@ import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/CombatLog.css";
 
 const CombatLog = () => {
-	const { combatLog } = useContext(AppContext);
+	const { combatLog, SFXon } = useContext(AppContext);
 	const [showLog, setShowLog] = useState(false);
 	const logRef = useRef(null);
 	const [playBtnPop] = useSound(btnPop);
@@ -17,7 +17,9 @@ const CombatLog = () => {
 	}, [combatLog]);
 
 	const toggleShowLog = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setShowLog(!showLog);
 	};
 

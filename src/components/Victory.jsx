@@ -25,11 +25,14 @@ const Victory = () => {
 		combatLog,
 		setCombatLog,
 		setVictory,
+		SFXon,
 	} = useContext(AppContext);
 	const [playBtnPop] = useSound(btnPop);
 
 	const continueCaves = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		const randomMonster = MonsterFactory(
 			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);
@@ -42,7 +45,9 @@ const Victory = () => {
 	};
 
 	const goTown = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		const randomMonster = MonsterFactory(
 			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);

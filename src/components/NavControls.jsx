@@ -5,50 +5,72 @@ import btnPop from "../assets/sounds/btn-pop.mp3";
 import restSound from "../assets/sounds/rest.mp3";
 
 const NavControls = () => {
-	const { playerStats, setPlayerStats, location, setLocation, playMainMusic } =
-		useContext(AppContext);
+	const {
+		playerStats,
+		setPlayerStats,
+		location,
+		setLocation,
+		playMainMusic,
+		SFXon,
+	} = useContext(AppContext);
 	const [playBtnPop] = useSound(btnPop);
 	const [playRest] = useSound(restSound);
 
 	const startAdventure = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("town");
 		playMainMusic();
 	};
 
 	const goTown = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("town");
 	};
 
 	const goInn = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("inn");
 	};
 
 	const goShop = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("shop");
 	};
 
 	const goCaveEntrance = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("cave entrance");
 	};
 
 	const enterCaves = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("cave interior");
 	};
 
 	const turnBack = () => {
-		playBtnPop();
+		if (SFXon) {
+			playBtnPop();
+		}
 		setLocation("turned back");
 	};
 
 	const rest = () => {
-		playBtnPop();
-		playRest();
+		if (SFXon) {
+			playBtnPop();
+			playRest();
+		}
 		setPlayerStats({ ...playerStats, health: playerStats.maxHealth });
 	};
 

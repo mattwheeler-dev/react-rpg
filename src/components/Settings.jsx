@@ -1,20 +1,32 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../App";
+import { useSound } from "use-sound";
+import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Settings.css";
 
 const Settings = () => {
 	const { SFXon, setSFXon, musicOn, setMusicOn } = useContext(AppContext);
 	const [showSettings, setShowSettings] = useState(false);
+	const [playBtnPop] = useSound(btnPop);
 
 	const toggleSettings = () => {
+		if (SFXon) {
+			playBtnPop();
+		}
 		setShowSettings(!showSettings);
 	};
 
 	const toggleSFX = () => {
+		if (SFXon) {
+			playBtnPop();
+		}
 		setSFXon(!SFXon);
 	};
 
 	const toggleMusic = () => {
+		if (SFXon) {
+			playBtnPop();
+		}
 		setMusicOn(!musicOn);
 	};
 
