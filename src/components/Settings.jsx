@@ -30,6 +30,13 @@ const Settings = () => {
 		setMusicOn(!musicOn);
 	};
 
+	const toggleHighContrast = () => {
+		if (SFXon) {
+			playBtnPop();
+		}
+		document.querySelector("body").classList.toggle("hc");
+	};
+
 	return (
 		<>
 			<button
@@ -58,7 +65,10 @@ const Settings = () => {
 					/>
 					<label htmlFor="music-check">Music</label>
 				</div>
-				<div className="high-contrast toggler">High-Contrast Mode</div>
+				<div className="high-contrast toggler">
+					<input id="hc-check" type="checkbox" onClick={toggleHighContrast} />
+					<label htmlFor="hc-check">High-Contrast Mode</label>
+				</div>
 				<button className="close-btn" onClick={toggleSettings}>
 					X
 				</button>
