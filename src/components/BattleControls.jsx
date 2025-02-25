@@ -20,7 +20,6 @@ const BattleControls = () => {
 		combatLog,
 		setCombatLog,
 		setVictory,
-		slainCount,
 		setSlainCount,
 		SFXon,
 	} = useContext(AppContext);
@@ -38,8 +37,6 @@ const BattleControls = () => {
 	const [playFleeSound] = useSound(fleeSound);
 	const [playLevelUpSound] = useSound(levelUpSound);
 	const [playGameOverSound] = useSound(gameOverSound);
-
-	const goldGained = Math.floor(Math.random() * 7) + 4;
 
 	// Level up
 	useEffect(() => {
@@ -62,27 +59,42 @@ const BattleControls = () => {
 				"| Attack + 1 & Max Health + 5 |",
 			]);
 		}
-	}, [playerTurn]);
+	}, [
+		SFXon,
+		playLevelUpSound,
+		playerStats.xp,
+		playerStats.xpNeeded,
+		setCombatLog,
+		setPlayerStats,
+	]);
 
 	// Monster turn
 	useEffect(() => {
 		setTimeout(() => {
 			if (playerTurn) {
 				return;
-			} else if (monsterStats.health < 1) {
-				setPlayerStats({
-					...playerStats,
-					gold: playerStats.gold + goldGained,
-					xp: playerStats.xp + monsterStats.xp,
-				});
+			}
+
+			// Monster death
+			if (monsterStats.health < 1) {
+				const goldGained = Math.floor(Math.random() * 7) + 4;
+				setPlayerStats((prev) => ({
+					...prev,
+					gold: prev.gold + goldGained,
+					xp: prev.xp + monsterStats.xp,
+				}));
 				setCombatLog((prevLog) => [
 					...prevLog,
 					`You have defeated the ${monsterStats.name}!`,
 				]);
-				setSlainCount(slainCount + 1);
+				setSlainCount((prev) => prev + 1);
 				setPlayerTurn(true);
 				setVictory(true);
-			} else if (playerStats.armor >= monsterStats.attack) {
+				return;
+			}
+
+			// Blocked attack
+			if (playerStats.armor >= monsterStats.attack) {
 				if (SFXon) {
 					playBlockedSound();
 				}
@@ -92,9 +104,10 @@ const BattleControls = () => {
 				}, 750);
 				setCombatLog((prevLog) => [
 					...prevLog,
-					`The ${monsterStats.name} attacked you, but your armor (${playerStats.armor}) blocked all  ${monsterStats.attack} damage!`,
+					`The ${monsterStats.name} attacked you, but your armor (${playerStats.armor}) blocked all ${monsterStats.attack} damage!`,
 				]);
 				setPlayerTurn(true);
+				return;
 			} else {
 				if (SFXon) {
 					playMonsterAttackSound();
@@ -102,31 +115,47 @@ const BattleControls = () => {
 				setShowMonsterAttack(true);
 				setTimeout(() => {
 					setShowMonsterAttack(false);
-				}, 500);
+				}, 750);
 
-				setPlayerStats({
-					...playerStats,
-					health:
-						playerStats.health - (monsterStats.attack - playerStats.armor),
-				});
 				setCombatLog((prevLog) => [
 					...prevLog,
 					`The ${monsterStats.name} attacks you for ${
 						monsterStats.attack - playerStats.armor
 					} damage.`,
 				]);
-				setPlayerTurn(true);
+
+				setPlayerStats({
+					...playerStats,
+					health:
+						playerStats.health - (monsterStats.attack - playerStats.armor),
+				});
 			}
+
+			setPlayerTurn(true);
 		}, 1500);
 
 		// Check for player death
 		if (playerStats.health < 1) {
-			if (SFXon) {
-				playGameOverSound();
-			}
+			if (SFXon) playGameOverSound();
 			setLocation("game over");
 		}
-	}, [playerTurn]);
+	}, [
+		SFXon,
+		monsterStats.attack,
+		monsterStats.health,
+		monsterStats.name,
+		monsterStats.xp,
+		playBlockedSound,
+		playGameOverSound,
+		playMonsterAttackSound,
+		playerStats,
+		playerTurn,
+		setCombatLog,
+		setLocation,
+		setPlayerStats,
+		setSlainCount,
+		setVictory,
+	]);
 
 	const attack = () => {
 		if (SFXon) {
@@ -135,7 +164,7 @@ const BattleControls = () => {
 		setShowSlash(true);
 		setTimeout(() => {
 			setShowSlash(false);
-		}, 500);
+		}, 750);
 		const currentWeapon = inventory.filter(
 			(item) => item.slot == "main-hand" && item.equipped
 		)[0];
