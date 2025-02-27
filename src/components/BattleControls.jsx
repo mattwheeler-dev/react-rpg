@@ -56,7 +56,8 @@ const BattleControls = () => {
 			setCombatLog((prevLog) => [
 				...prevLog,
 				"Congrats! You leveled up!",
-				"| Attack + 1 & Max Health + 5 |",
+				"Max Health + 5",
+				"Attack + 1",
 			]);
 		}
 	}, [
@@ -77,7 +78,9 @@ const BattleControls = () => {
 
 			// Monster death
 			if (monsterStats.health < 1) {
-				const goldGained = Math.floor(Math.random() * 7) + 4;
+				const goldGained =
+					(Math.floor(Math.random() * 4) + 1) * playerStats.level;
+				console.log(goldGained);
 				setPlayerStats((prev) => ({
 					...prev,
 					gold: prev.gold + goldGained,
@@ -86,6 +89,8 @@ const BattleControls = () => {
 				setCombatLog((prevLog) => [
 					...prevLog,
 					`You have defeated the ${monsterStats.name}!`,
+					`+ ${goldGained} Gold`,
+					`+ ${monsterStats.xp} XP`,
 				]);
 				setSlainCount((prev) => prev + 1);
 				setPlayerTurn(true);
