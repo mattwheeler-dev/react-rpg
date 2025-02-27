@@ -1,3 +1,4 @@
+// Monster images
 import bat1 from "../assets/images/monsters/bat1.png";
 import bat2 from "../assets/images/monsters/bat2.png";
 import bat3 from "../assets/images/monsters/bat3.png";

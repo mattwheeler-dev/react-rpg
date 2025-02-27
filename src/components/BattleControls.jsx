@@ -80,7 +80,7 @@ const BattleControls = () => {
 			if (monsterStats.health < 1) {
 				const goldGained =
 					(Math.floor(Math.random() * 4) + 1) * playerStats.level;
-				console.log(goldGained);
+
 				setPlayerStats((prev) => ({
 					...prev,
 					gold: prev.gold + goldGained,
