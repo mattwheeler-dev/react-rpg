@@ -5,7 +5,6 @@ body.hc h3 {
 }
 
 body.hc main p,
-body.hc .hero-gear div,
 body.hc .shop-item,
 body.hc .pack-item,
 body.hc .monster-stats,
@@ -39,6 +38,10 @@ body.hc .settings {
 	border-color: var(--hc-secondary);
 }
 
+body.hc .hero-gear div {
+	background-color: #fff;
+}
+
 body.hc .hero-gear div svg {
-	color: #fff;
+	color: #000;
 }
