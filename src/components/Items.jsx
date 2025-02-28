@@ -8,6 +8,11 @@ import woodenShield from "../assets/images/items/wooden-shield.png";
 import ironGloves from "../assets/images/items/iron-gloves.png";
 import ironBoots from "../assets/images/items/iron-boots.png";
 import ironPants from "../assets/images/items/iron-pants.png";
+import ironArmor from "../assets/images/items/iron-armor.png";
+import ironHelm from "../assets/images/items/iron-helm.png";
+import ironShield from "../assets/images/items/iron-shield.png";
+import heroShield from "../assets/images/items/hero-shield.png";
+import heroSword from "../assets/images/items/hero-sword.png";
 
 const Items = [
 	{
@@ -114,11 +119,66 @@ const Items = [
 		name: "Iron Pants",
 		type: "armor",
 		slot: "legs",
+		value: 25,
+		armor: 5,
+		inPack: false,
+		equipped: false,
+		img: ironPants,
+	},
+	{
+		id: 11,
+		name: "Iron Armor",
+		type: "armor",
+		slot: "torso",
+		value: 30,
+		armor: 6,
+		inPack: false,
+		equipped: false,
+		img: ironArmor,
+	},
+	{
+		id: 12,
+		name: "Iron Helm",
+		type: "armor",
+		slot: "head",
+		value: 18,
+		armor: 3,
+		inPack: false,
+		equipped: false,
+		img: ironHelm,
+	},
+	{
+		id: 13,
+		name: "Iron Shield",
+		type: "armor",
+		slot: "off-hand",
 		value: 20,
 		armor: 4,
 		inPack: false,
 		equipped: false,
-		img: ironPants,
+		img: ironShield,
+	},
+	{
+		id: 14,
+		name: "Hero Shield",
+		type: "armor",
+		slot: "off-hand",
+		value: 75,
+		armor: 15,
+		inPack: false,
+		equipped: false,
+		img: heroShield,
+	},
+	{
+		id: 15,
+		name: "Hero Sword",
+		type: "weapon",
+		slot: "main-hand",
+		value: 100,
+		damage: 20,
+		inPack: false,
+		equipped: false,
+		img: heroSword,
 	},
 ];
 

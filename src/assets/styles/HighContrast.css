@@ -39,7 +39,8 @@ body.hc .settings {
 }
 
 body.hc .hero-gear div {
-	background-color: #fff;
+	background-color: var(--hc-secondary);
+	border-color: #fff;
 }
 
 body.hc .hero-gear div svg {
