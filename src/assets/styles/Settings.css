@@ -1,5 +1,6 @@
 .settings.open {
-	min-height: 12rem;
+	height: fit-content;
+	min-height: 15rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -26,4 +27,18 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:focus {
 	outline: max(2px, 0.15rem) solid var(--secondary);
 	outline-offset: max(2px, 0.15rem);
+}
+
+.socials {
+	margin: 1rem auto;
+}
+
+.socials a {
+	margin-left: 1rem;
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.socials a:hover {
+	color: var(--secondary);
 }

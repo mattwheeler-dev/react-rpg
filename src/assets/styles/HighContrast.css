@@ -58,3 +58,7 @@ body.hc input[type="checkbox"]:checked {
 body.hc input[type="checkbox"]:focus {
 	outline-color: var(--hc-secondary);
 }
+
+body.hc .socials a:hover {
+	color: var(--hc-secondary);
+}

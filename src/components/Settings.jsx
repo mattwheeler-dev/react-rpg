@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useSound } from "use-sound";
 import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Settings.css";
@@ -59,6 +61,18 @@ const Settings = () => {
 					<input type="checkbox" onClick={toggleHighContrast} />
 					High-Contrast Mode
 				</label>
+				<p className="socials">
+					Find me:
+					<a
+						href="https://www.linkedin.com/in/mattwheeler-dev/"
+						target="_blank"
+					>
+						<FontAwesomeIcon icon={faLinkedinIn} />
+					</a>
+					<a href="https://github.com/mattwheeler-dev" target="_blank">
+						<FontAwesomeIcon icon={faGithub} />
+					</a>
+				</p>
 				<button className="close-btn" onClick={toggleSettings}>
 					X
 				</button>
