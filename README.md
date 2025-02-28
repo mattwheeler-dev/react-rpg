@@ -1,6 +1,10 @@
 # Emberhollow
 
+<img width="500" src="https://github.com/user-attachments/assets/78301f31-5f1c-4291-a3cc-6e880534c076" alt="thumbnail for emberhollow react project" />
+
 Fantasy themed game built with React + Vite and hosted with Firebase.
+
+Check it out <a href="https://react-emberhollow.web.app/" target="_blank">here</a>
 
 Players can navigate to the inn (The Drowsy Dragon), the shop (Volimar's Shop), and Emberhollow Caves where they can fight endless monsters.
 
