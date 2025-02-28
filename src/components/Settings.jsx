@@ -46,7 +46,7 @@ const Settings = () => {
 				onClick={toggleSettings}
 			></button>
 			<div className={showSettings ? "settings open" : "settings"}>
-				<h3>Settings</h3>
+				<h2>Settings</h2>
 				<label>
 					<input type="checkbox" defaultChecked onClick={toggleSFX} />
 					Sound Effects

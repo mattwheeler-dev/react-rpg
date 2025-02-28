@@ -15,7 +15,7 @@ const GameOver = () => {
 				that is...
 			</p>
 			<div className="scoreboard">
-				<h4>Emberhollow{`'`}s (Fallen) Hero</h4>
+				<h3>Emberhollow{`'`}s (Fallen) Hero</h3>
 				<p>Level: {playerStats.level}</p>
 				<p>Monsters Slain: {slainCount}</p>
 				<p>Ended By: {monsterStats.name}</p>

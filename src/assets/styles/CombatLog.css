@@ -2,13 +2,14 @@
 	display: none;
 	height: 15rem;
 	width: 80%;
+	max-width: 700px;
 	padding: 0.5rem;
 	background-color: var(--gray);
 	border: 2px solid var(--secondary);
 	border-radius: var(--radius);
 	overflow-y: scroll;
 	position: fixed;
-	bottom: 10rem;
+	top: 25%;
 	left: 10%;
 }
 
