@@ -175,7 +175,7 @@ const Items = [
 		type: "weapon",
 		slot: "main-hand",
 		value: 100,
-		damage: 20,
+		damage: 15,
 		inPack: false,
 		equipped: false,
 		img: heroSword,
