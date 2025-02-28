@@ -47,28 +47,18 @@ const Settings = () => {
 			></button>
 			<div className={showSettings ? "settings open" : "settings"}>
 				<h3>Settings</h3>
-				<div className="sfx toggler">
-					<input
-						id="sfx-check"
-						type="checkbox"
-						defaultChecked
-						onClick={toggleSFX}
-					/>
-					<label htmlFor="sfx-check">Sound Effects</label>
-				</div>
-				<div className="music toggler">
-					<input
-						id="music-check"
-						type="checkbox"
-						defaultChecked
-						onClick={toggleMusic}
-					/>
-					<label htmlFor="music-check">Music</label>
-				</div>
-				<div className="high-contrast toggler">
-					<input id="hc-check" type="checkbox" onClick={toggleHighContrast} />
-					<label htmlFor="hc-check">High-Contrast Mode</label>
-				</div>
+				<label>
+					<input type="checkbox" defaultChecked onClick={toggleSFX} />
+					Sound Effects
+				</label>
+				<label>
+					<input type="checkbox" defaultChecked onClick={toggleMusic} />
+					Music
+				</label>
+				<label>
+					<input type="checkbox" onClick={toggleHighContrast} />
+					High-Contrast Mode
+				</label>
 				<button className="close-btn" onClick={toggleSettings}>
 					X
 				</button>

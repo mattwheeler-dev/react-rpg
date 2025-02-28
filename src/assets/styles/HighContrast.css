@@ -46,3 +46,15 @@ body.hc .hero-gear div {
 body.hc .hero-gear div svg {
 	color: #000;
 }
+
+body.hc input[type="checkbox"] {
+	border-color: var(--hc-secondary);
+}
+
+body.hc input[type="checkbox"]:checked {
+	background-color: var(--hc-secondary);
+}
+
+body.hc input[type="checkbox"]:focus {
+	outline-color: var(--hc-secondary);
+}
