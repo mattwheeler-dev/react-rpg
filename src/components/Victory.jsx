@@ -6,15 +6,15 @@ import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Victory.css";
 
 const monsterNames = [
-	"Bat",
-	"Bird",
-	"Bunn",
-	"Crab",
-	"Lizard",
-	"Poker",
-	"Rat",
-	"Shell",
-	"Slime",
+	"Dreadhare",
+	"Blightbeak",
+	"Grimtail",
+	"Doomwing",
+	"Muckfiend",
+	"Gloomscale",
+	"Rotpinch",
+	"Shellgore",
+	"Nightquill",
 ];
 
 const Victory = () => {

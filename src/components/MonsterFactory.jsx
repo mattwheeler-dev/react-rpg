@@ -1,122 +1,137 @@
-// Monster images
-import bat1 from "../assets/images/monsters/bat1.png";
-import bat2 from "../assets/images/monsters/bat2.png";
-import bat3 from "../assets/images/monsters/bat3.png";
-import bat4 from "../assets/images/monsters/bat4.png";
-import bird1 from "../assets/images/monsters/bird1.png";
-import bird2 from "../assets/images/monsters/bird2.png";
-import bird3 from "../assets/images/monsters/bird3.png";
-import bird4 from "../assets/images/monsters/bird4.png";
-import bunn1 from "../assets/images/monsters/bunn1.png";
-import bunn2 from "../assets/images/monsters/bunn2.png";
-import bunn3 from "../assets/images/monsters/bunn3.png";
-import bunn4 from "../assets/images/monsters/bunn4.png";
-import bunn5 from "../assets/images/monsters/bunn5.png";
-import crab1 from "../assets/images/monsters/crab1.png";
-import crab2 from "../assets/images/monsters/crab2.png";
-import crab3 from "../assets/images/monsters/crab3.png";
-import liz1 from "../assets/images/monsters/liz1.png";
-import liz2 from "../assets/images/monsters/liz2.png";
-import liz3 from "../assets/images/monsters/liz3.png";
-import poker1 from "../assets/images/monsters/poker1.png";
-import poker2 from "../assets/images/monsters/poker2.png";
-import poker3 from "../assets/images/monsters/poker3.png";
-import poker4 from "../assets/images/monsters/poker4.png";
-import rat1 from "../assets/images/monsters/rat1.png";
-import rat2 from "../assets/images/monsters/rat2.png";
-import rat3 from "../assets/images/monsters/rat3.png";
-import rat4 from "../assets/images/monsters/rat4.png";
-import shell1 from "../assets/images/monsters/shell1.png";
-import shell2 from "../assets/images/monsters/shell2.png";
-import shell3 from "../assets/images/monsters/shell3.png";
-import shell4 from "../assets/images/monsters/shell4.png";
-import slime1 from "../assets/images/monsters/slime1.png";
-import slime2 from "../assets/images/monsters/slime2.png";
-import slime3 from "../assets/images/monsters/slime3.png";
+// Import all monster variant images
+// Dreadhare
+import dreadhare1 from "../assets/images/monsters/dreadhare1.png";
+import dreadhare2 from "../assets/images/monsters/dreadhare2.png";
+import dreadhare3 from "../assets/images/monsters/dreadhare3.png";
+import dreadhare4 from "../assets/images/monsters/dreadhare4.png";
+import dreadhare5 from "../assets/images/monsters/dreadhare5.png";
+// Blightbeak
+import blightbeak1 from "../assets/images/monsters/blightbeak1.png";
+import blightbeak2 from "../assets/images/monsters/blightbeak2.png";
+import blightbeak3 from "../assets/images/monsters/blightbeak3.png";
+import blightbeak4 from "../assets/images/monsters/blightbeak4.png";
+// Grimtail
+import grimtail1 from "../assets/images/monsters/grimtail1.png";
+import grimtail2 from "../assets/images/monsters/grimtail2.png";
+import grimtail3 from "../assets/images/monsters/grimtail3.png";
+import grimtail4 from "../assets/images/monsters/grimtail4.png";
+// Dommwing
+import doomwing1 from "../assets/images/monsters/doomwing1.png";
+import doomwing2 from "../assets/images/monsters/doomwing2.png";
+import doomwing3 from "../assets/images/monsters/doomwing3.png";
+import doomwing4 from "../assets/images/monsters/doomwing4.png";
+// Muckfiend
+import muckfiend1 from "../assets/images/monsters/muckfiend1.png";
+import muckfiend2 from "../assets/images/monsters/muckfiend2.png";
+import muckfiend3 from "../assets/images/monsters/muckfiend3.png";
+// Gloomscale
+import gloomscale1 from "../assets/images/monsters/gloomscale1.png";
+import gloomscale2 from "../assets/images/monsters/gloomscale2.png";
+import gloomscale3 from "../assets/images/monsters/gloomscale3.png";
+// Rotpinch
+import rotpinch1 from "../assets/images/monsters/rotpinch1.png";
+import rotpinch2 from "../assets/images/monsters/rotpinch2.png";
+import rotpinch3 from "../assets/images/monsters/rotpinch3.png";
+// Shellgore
+import shellgore1 from "../assets/images/monsters/shellgore1.png";
+import shellgore2 from "../assets/images/monsters/shellgore2.png";
+import shellgore3 from "../assets/images/monsters/shellgore3.png";
+import shellgore4 from "../assets/images/monsters/shellgore4.png";
+// Nightquill
+import nightquill1 from "../assets/images/monsters/nightquill1.png";
+import nightquill2 from "../assets/images/monsters/nightquill2.png";
+import nightquill3 from "../assets/images/monsters/nightquill3.png";
+import nightquill4 from "../assets/images/monsters/nightquill4.png";
 
 // Image arrays for variants
-const batImgs = [bat1, bat2, bat3, bat4];
-const birdImgs = [bird1, bird2, bird3, bird4];
-const bunnImgs = [bunn1, bunn2, bunn3, bunn4, bunn5];
-const crabImgs = [crab1, crab2, crab3];
-const lizImgs = [liz1, liz2, liz3];
-const pokerImgs = [poker1, poker2, poker3, poker4];
-const ratImgs = [rat1, rat2, rat3, rat4];
-const shellImgs = [shell1, shell2, shell3, shell4];
-const slimeImgs = [slime1, slime2, slime3];
+const dreadhareImgs = [
+	dreadhare1,
+	dreadhare2,
+	dreadhare3,
+	dreadhare4,
+	dreadhare5,
+];
+const blightbeakImgs = [blightbeak1, blightbeak2, blightbeak3, blightbeak4];
+const grimtailImgs = [grimtail1, grimtail2, grimtail3, grimtail4];
+const doomwingImgs = [doomwing1, doomwing2, doomwing3, doomwing4];
+const muckfiendImgs = [muckfiend1, muckfiend2, muckfiend3];
+const gloomscaleImgs = [gloomscale1, gloomscale2, gloomscale3];
+const rotpinchImgs = [rotpinch1, rotpinch2, rotpinch3];
+const shellgoreImgs = [shellgore1, shellgore2, shellgore3, shellgore4];
+const nightquillImgs = [nightquill1, nightquill2, nightquill3, nightquill4];
 
 const monsters = {
-	Bat: {
-		name: "Bat",
-		health: 11,
-		maxHealth: 11,
-		attack: 2,
-		xp: 4,
-		images: batImgs,
-	},
-	Bird: {
-		name: "Bird",
-		health: 9,
-		maxHealth: 9,
-		attack: 1,
-		xp: 3,
-		images: birdImgs,
-	},
-	Bunn: {
-		name: "Bunn",
+	Dreadhare: {
+		name: "Dreadhare",
 		health: 7,
 		maxHealth: 7,
 		attack: 1,
 		xp: 3,
-		images: bunnImgs,
+		images: dreadhareImgs,
 	},
-	Crab: {
-		name: "Crab",
-		health: 13,
-		maxHealth: 13,
-		attack: 4,
-		xp: 6,
-		images: crabImgs,
+	Blightbeak: {
+		name: "Blightbeak",
+		health: 9,
+		maxHealth: 9,
+		attack: 1,
+		xp: 3,
+		images: blightbeakImgs,
 	},
-	Lizard: {
-		name: "Lizard",
-		health: 13,
-		maxHealth: 13,
-		attack: 3,
-		xp: 5,
-		images: lizImgs,
-	},
-	Poker: {
-		name: "Poker",
-		health: 15,
-		maxHealth: 15,
-		attack: 5,
-		xp: 7,
-		images: pokerImgs,
-	},
-	Rat: {
-		name: "Rat",
+	Grimtail: {
+		name: "Grimtail",
 		health: 9,
 		maxHealth: 9,
 		attack: 2,
 		xp: 4,
-		images: ratImgs,
+		images: grimtailImgs,
 	},
-	Shell: {
-		name: "Shell",
-		health: 15,
-		maxHealth: 15,
-		attack: 4,
-		xp: 6,
-		images: shellImgs,
+	Doomwing: {
+		name: "Doomwing",
+		health: 11,
+		maxHealth: 11,
+		attack: 2,
+		xp: 4,
+		images: doomwingImgs,
 	},
-	Slime: {
-		name: "Slime",
+	Muckfiend: {
+		name: "Muckfiend",
 		health: 11,
 		maxHealth: 11,
 		attack: 3,
 		xp: 5,
-		images: slimeImgs,
+		images: muckfiendImgs,
+	},
+	Gloomscale: {
+		name: "Gloomscale",
+		health: 13,
+		maxHealth: 13,
+		attack: 3,
+		xp: 5,
+		images: gloomscaleImgs,
+	},
+	Rotpinch: {
+		name: "Rotpinch",
+		health: 13,
+		maxHealth: 13,
+		attack: 4,
+		xp: 6,
+		images: rotpinchImgs,
+	},
+	Shellgore: {
+		name: "Shellgore",
+		health: 15,
+		maxHealth: 15,
+		attack: 4,
+		xp: 6,
+		images: shellgoreImgs,
+	},
+	Nightquill: {
+		name: "Nightquill",
+		health: 15,
+		maxHealth: 15,
+		attack: 5,
+		xp: 7,
+		images: nightquillImgs,
 	},
 };
 

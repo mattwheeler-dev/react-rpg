@@ -18,15 +18,15 @@ import caveMusic from "./assets/sounds/cave-music.mp3";
 export const AppContext = createContext();
 
 const monsterNames = [
-	"Bat",
-	"Bird",
-	"Bunn",
-	"Crab",
-	"Lizard",
-	"Poker",
-	"Rat",
-	"Shell",
-	"Slime",
+	"Dreadhare",
+	"Blightbeak",
+	"Grimtail",
+	"Doomwing",
+	"Muckfiend",
+	"Gloomscale",
+	"Rotpinch",
+	"Shellgore",
+	"Nightquill",
 ];
 
 const randomMonster =

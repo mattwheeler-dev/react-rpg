@@ -81,9 +81,9 @@ const NavControls = () => {
 			locations: ["welcome"],
 		},
 		{ text: "Turn Back...", action: turnBack, locations: ["welcome"] },
-		{ text: "The Tipsy Pixie", action: goInn, locations: ["town"] },
+		{ text: "The Drowsy Dragon", action: goInn, locations: ["town"] },
 		{ text: "Volimar's Shop", action: goShop, locations: ["town"] },
-		{ text: "Kelindral Caves", action: goCaveEntrance, locations: ["town"] },
+		{ text: "Emberhollow Caves", action: goCaveEntrance, locations: ["town"] },
 		{ text: "Rest", action: rest, locations: ["inn"] },
 		{
 			text: "Enter Caves",

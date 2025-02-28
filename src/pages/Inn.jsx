@@ -6,12 +6,12 @@ const Inn = () => {
 	const { playerStats } = useContext(AppContext);
 	return (
 		<main className="inn">
-			<h1>The Tipsy Pixie</h1>
+			<h1>The Drowsy Dragon</h1>
 			<p>
-				Welcome to The Tipsy Pixie! We used to rent out rooms for the night, but
-				now we{`'`}re one of the only places in town that still has a roof. So
-				long as you don{`'`}t cause any trouble, you{`'`}re welcome to stay here
-				for free.
+				Welcome to The Drowsy Dragon! We used to rent out rooms for the night,
+				but now we{`'`}re one of the only places in town that still has a roof.
+				So long as you don{`'`}t cause any trouble, you{`'`}re welcome to stay
+				here for free.
 			</p>
 			<p className="tip">
 				Tip: Resting at the inn restores your health.
