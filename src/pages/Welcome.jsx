@@ -3,7 +3,7 @@ import NavControls from "../components/NavControls";
 const Welcome = () => {
 	return (
 		<main className="welcome">
-			<h1>React RPG</h1>
+			<h1>Emberhollow</h1>
 			<h2>Where heroes are made!</h2>
 
 			<p>
