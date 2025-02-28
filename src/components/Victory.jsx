@@ -58,7 +58,13 @@ const Victory = () => {
 		const randomMonster = MonsterFactory(
 			monsterNames[Math.floor(Math.random() * monsterNames.length)]
 		);
-		setMonsterStats(randomMonster);
+		setMonsterStats({
+			...randomMonster,
+			health: randomMonster.health + playerStats.level,
+			maxHealth: randomMonster.maxHealth + playerStats.level,
+			attack: randomMonster.attack + playerStats.level,
+			xp: randomMonster.xp + playerStats.level,
+		});
 		setLocation("town");
 		setVictory(false);
 	};
