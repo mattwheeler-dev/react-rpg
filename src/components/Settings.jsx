@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AppContext } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { useSound } from "use-sound";
 import btnPop from "../assets/sounds/btn-pop.mp3";
 import "../assets/styles/Settings.css";
@@ -71,6 +72,9 @@ const Settings = () => {
 					</a>
 					<a href="https://github.com/mattwheeler-dev" target="_blank">
 						<FontAwesomeIcon icon={faGithub} />
+					</a>
+					<a href="https://mattwheeler-dev.com" target="_blank">
+						<FontAwesomeIcon icon={faGlobe} />
 					</a>
 				</p>
 				<button className="close-btn" onClick={toggleSettings}>
