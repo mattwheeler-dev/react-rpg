@@ -1,0 +1,33 @@
+.shop-container {
+	min-height: 10rem;
+	max-height: 23rem;
+	width: 95%;
+	max-width: 1000px;
+	margin: 1rem auto;
+	border: var(--semi-trans-border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	overflow-y: scroll;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.shop-item {
+	width: 45%;
+	margin: 0.75rem 0;
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #023047bb;
+	border: 2px solid var(--secondary);
+	border-radius: var(--radius);
+}
+
+.shop-item img {
+	height: 5rem;
+}
+
+.item-slot {
+	text-transform: capitalize;
+	font-size: 0.7rem;
+}

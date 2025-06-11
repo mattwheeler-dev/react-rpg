@@ -1,0 +1,227 @@
+/* Google font import (Faculty Glyphic @ 300 - 700) */
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+
+/* Variables */
+:root {
+	--primary: #023047;
+	--secondary: #ffb703;
+	--gray: #151515;
+	--hc-primary: #020d25;
+	--hc-secondary: #03ffab;
+	--semi-trans-bg: #10101090;
+	--semi-trans-border: 2px solid #ffffff40;
+	--radius: 1rem;
+	--shadow: 0 0 0.5rem #000;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Faculty Glyphic", Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100dvh;
+	width: 100dvw;
+	color: #fff;
+	background-color: var(--gray);
+	overflow: clip;
+}
+
+#root,
+main {
+	height: 100%;
+	width: 100%;
+}
+
+main {
+	padding-top: 2.25rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+	height: fit-content;
+	width: 100%;
+	padding: 0.25rem;
+	text-align: center;
+	text-shadow: 0.2rem 0.15rem 0 #000;
+	background-color: var(--semi-trans-bg);
+}
+
+/* Main text area on pages */
+main > p {
+	max-height: 20rem;
+	width: 88%;
+	max-width: 800px;
+	margin: 1rem auto;
+	padding: 0.5rem 1rem;
+	background-color: var(--semi-trans-bg);
+	border: var(--semi-trans-border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	overflow-y: scroll;
+}
+
+/* Buttons starting point */
+button {
+	padding: 0.25rem 0.75rem;
+	color: #fff;
+	background-color: var(--primary);
+	border: 3px outset var(--secondary);
+}
+
+button:active {
+	scale: 0.9;
+}
+
+button:disabled {
+	text-decoration: line-through;
+	background-color: #505050;
+	border-color: #000;
+}
+
+.nav-controls {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.nav-controls button {
+	margin-bottom: 1rem;
+	box-shadow: var(--shadow);
+}
+
+/* Tips */
+.tip {
+	font-size: 0.75rem;
+	background-color: var(--gray);
+	border: none;
+	box-shadow: none;
+}
+
+/* Game over stats */
+.scoreboard {
+	width: 80%;
+	max-width: 700px;
+	margin: 2rem auto;
+	padding: 1.5rem 0;
+	text-align: center;
+	background-color: var(--primary);
+	border: 3px solid var(--secondary);
+	border-radius: var(--radius);
+}
+
+.scoreboard h4 {
+	font-size: 1.2rem;
+}
+
+.scoreboard p {
+	margin-top: 0.25rem;
+}
+
+/* Page bgs */
+.welcome,
+.town {
+	background-image: url("./assets/images/bgs/town.png");
+}
+
+.turned-back {
+	background-image: url("./assets/images/bgs/turned-back.png");
+}
+
+.inn {
+	background-image: url("./assets/images/bgs/inn.png");
+}
+
+.shop {
+	background-image: url("./assets/images/bgs/shop.png");
+}
+
+.cave-entrance {
+	background-image: url("./assets/images/bgs/cave-entrance.png");
+}
+
+.cave-interior {
+	background-image: url("./assets/images/bgs/cave1.png");
+}
+
+.game-over {
+	background-image: url("./assets/images/bgs/game-over.png");
+}
+
+/* Larger viewports */
+@media (min-width: 800px) {
+	main > p {
+		height: fit-content;
+		max-height: 40rem;
+		width: 70%;
+		margin: 4rem auto;
+		padding: 2rem 1rem;
+		overflow-y: clip;
+	}
+
+	.nav-controls {
+		justify-content: center;
+	}
+
+	.nav-controls button {
+		margin: 0 2rem;
+	}
+
+	.tip {
+		text-align: center;
+		font-size: 1rem;
+		padding: 0.75rem;
+	}
+
+	.shop-container {
+		height: 60%;
+		max-height: none;
+		margin: 4rem auto;
+	}
+
+	.shop-item,
+	.pack-item {
+		width: 30%;
+	}
+
+	.shop-item img,
+	.pack-item img {
+		height: 7rem;
+	}
+
+	.action-bar {
+		height: 5rem;
+	}
+
+	.action-bar-icon {
+		width: 5rem;
+		margin-right: 1rem;
+	}
+
+	.hero-info,
+	.pack,
+	.settings {
+		top: 15%;
+		left: 10%;
+	}
+
+	.pack {
+		height: 60%;
+		max-height: 40rem;
+	}
+
+	.settings label {
+		margin: 1rem 0;
+		font-size: 1.25rem;
+	}
+}
