@@ -39,10 +39,10 @@ const Victory = () => {
 		);
 		setMonsterStats({
 			...randomMonster,
-			health: randomMonster.health + playerStats.level,
-			maxHealth: randomMonster.maxHealth + playerStats.level,
-			attack: randomMonster.attack + playerStats.level,
-			xp: randomMonster.xp + playerStats.level,
+			health: randomMonster.health + playerStats.level * 2,
+			maxHealth: randomMonster.maxHealth + playerStats.level * 2,
+			attack: randomMonster.attack + playerStats.level * 2,
+			xp: randomMonster.xp + playerStats.level * 2,
 		});
 		setCombatLog([
 			...combatLog,
@@ -60,10 +60,10 @@ const Victory = () => {
 		);
 		setMonsterStats({
 			...randomMonster,
-			health: randomMonster.health + playerStats.level,
-			maxHealth: randomMonster.maxHealth + playerStats.level,
-			attack: randomMonster.attack + playerStats.level,
-			xp: randomMonster.xp + playerStats.level,
+			health: randomMonster.health + playerStats.level * 2,
+			maxHealth: randomMonster.maxHealth + playerStats.level * 2,
+			attack: randomMonster.attack + playerStats.level * 2,
+			xp: randomMonster.xp + playerStats.level * 2,
 		});
 		setLocation("town");
 		setVictory(false);
